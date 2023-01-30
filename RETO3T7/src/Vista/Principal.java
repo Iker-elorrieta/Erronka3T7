@@ -56,7 +56,7 @@ public class Principal extends JFrame {
 		
 		ongietorria = new JTextField();
 		ongietorria.setText("Ongi etorri elorrieta-errekamari zinemaren webgunera");
-		ongietorria.setBounds(52, 106, 311, 44);
+		ongietorria.setBounds(73, 108, 311, 44);
 		Principal.add(ongietorria);
 		ongietorria.setColumns(10);
 		
@@ -67,7 +67,7 @@ public class Principal extends JFrame {
 				vent.setVisible(true);
 			}
 		});
-		btnNewButton.setBounds(127, 161, 89, 23);
+		btnNewButton.setBounds(156, 163, 147, 33);
 		Principal.add(btnNewButton);
 	}
 	
