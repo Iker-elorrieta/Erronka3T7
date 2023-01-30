@@ -7,7 +7,12 @@ import org.junit.jupiter.api.Test;
 class MetodosTest {
 
 	@Test
-	void test() {
+	void Aretoatest() {
+		
+	}
+	
+	@Test
+	void Bezeroatest() {
 		
 	}
 
