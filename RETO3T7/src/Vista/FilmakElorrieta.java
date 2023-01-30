@@ -15,6 +15,9 @@ import javax.swing.JSpinner;
 import javax.swing.JToggleButton;
 import javax.swing.ImageIcon;
 import javax.swing.JTextPane;
+import javax.swing.JTextField;
+import javax.swing.JTextArea;
+import javax.swing.JScrollPane;
 
 public class FilmakElorrieta extends JFrame {
 
@@ -33,7 +36,7 @@ public class FilmakElorrieta extends JFrame {
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-
+		setPreferredSize(preferredSize());
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
@@ -46,13 +49,13 @@ public class FilmakElorrieta extends JFrame {
 		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\IN1DAM\\Erronka3T7\\Imagenes\\hulk.jpg"));
 		contentPane.add(lblNewLabel);
 		
+		JTextArea txtrBruceBannerUn = new JTextArea();
+		txtrBruceBannerUn.setText("Bruce Banner,\r\nun investigador de gen\u00E9tica,\r\nabsorbi\u00F3 una dosis letal de rayos gamma.\r\n");
+		txtrBruceBannerUn.setBounds(133, 38, 274, 122);
+		contentPane.add(txtrBruceBannerUn);
+		
 		JScrollBar scrollBar = new JScrollBar();
 		scrollBar.setBounds(417, 0, 17, 261);
 		contentPane.add(scrollBar);
-		
-		JTextPane txtpnBruceBannerUn = new JTextPane();
-		txtpnBruceBannerUn.setText("Bruce Banner, un investigador de gen\u00E9tica, absorbi\u00F3 una dosis letal de rayos gamma.");
-		txtpnBruceBannerUn.setBounds(122, 38, 193, 122);
-		contentPane.add(txtpnBruceBannerUn);
 	}
 }
