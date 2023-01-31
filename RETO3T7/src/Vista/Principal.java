@@ -49,6 +49,17 @@ public class Principal extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		Principal = new JPanel();
+		Principal.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				try {
+					Thread.sleep(2000);// hiru segundu itxaroteko beste pantailara joan aurretik
+				} catch (Exception e1) {
+					System.out.println(e1);
+				}
+				vent = new Zinemak();
+				vent.setVisible(true);
+			}
+		});
 		Principal.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(Principal);
@@ -60,15 +71,6 @@ public class Principal extends JFrame {
 		Principal.add(ongietorria);
 		ongietorria.setColumns(10);
 		
-		JButton btnNewButton = new JButton("Ongi etorri");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				vent = new Zinemak();
-				vent.setVisible(true);
-			}
-		});
-		btnNewButton.setBounds(156, 163, 147, 33);
-		Principal.add(btnNewButton);
 	}
 	
 }
