@@ -7,13 +7,8 @@ public class Filmak {
 	private String iraupena;
 	private String generoa;
 	private int kostua;
+	private String NomFilma;
 	
-	public Filmak(int codFilma, String iraupena, String generoa, int kostua) {
-		CodFilma = codFilma;
-		this.iraupena = iraupena;
-		this.generoa = generoa;
-		this.kostua = kostua;
-	}
 	public int getCodFilma() {
 		return CodFilma;
 	}
@@ -38,12 +33,19 @@ public class Filmak {
 	public void setKostua(int kostua) {
 		this.kostua = kostua;
 	}
+	
+	public String getNomFilma() {
+		return NomFilma;
+	}
+	public void setNomFilma(String nomFilma) {
+		NomFilma = nomFilma;
+	}
+	
 	@Override
 	public String toString() {
 		return "Filmak [CodFilma=" + CodFilma + ", iraupena=" + iraupena + ", generoa=" + generoa + ", kostua=" + kostua
-				+ "]";
+				+ ", NomFilma=" + NomFilma + "]";
 	}
-	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -53,8 +55,9 @@ public class Filmak {
 		if (getClass() != obj.getClass())
 			return false;
 		Filmak other = (Filmak) obj;
-		return CodFilma == other.CodFilma && Objects.equals(generoa, other.generoa)
-				&& Objects.equals(iraupena, other.iraupena) && kostua == other.kostua;
+		return CodFilma == other.CodFilma && Objects.equals(NomFilma, other.NomFilma)
+				&& Objects.equals(generoa, other.generoa) && Objects.equals(iraupena, other.iraupena)
+				&& kostua == other.kostua;
 	}
 	
 	

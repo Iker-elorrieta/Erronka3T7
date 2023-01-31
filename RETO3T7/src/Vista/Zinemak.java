@@ -20,9 +20,8 @@ public class Zinemak extends JFrame {
 	FilmakZubiarte ventZubiarte;
 	FilmakGetxo ventGetxo;
 	FilmakMaxCenter ventMax;
+	Laburpena ventLabur;
 	private Filmak[] filmak = new Filmak[0];
-	
-
 	/**
 	 * Launch the application.
 	 */
@@ -99,9 +98,12 @@ public class Zinemak extends JFrame {
 		JButton btnBukatu = new JButton("Bukatu");
 		btnBukatu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				/*if () {
+				if(filmakKont=0) {
+					ventLabur = new Laburpena(filmak);
+					ventLabur.setVisible(true);
+				}else {
 					
-				}*/
+				}
 			}
 		});
 		btnBukatu.setBounds(20, 198, 89, 23);
