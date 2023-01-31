@@ -40,7 +40,7 @@ public class InfoCine {
 		if (getClass() != obj.getClass())
 			return false;
 		InfoCine other = (InfoCine) obj;
-		return Codzinema == other.Codzinema && ZbkAretoak == other.ZbkAretoak;
+		return Objects.equals(Codzinema, other.Codzinema);
 	}
 	
 	

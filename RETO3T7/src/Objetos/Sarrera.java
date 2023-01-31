@@ -70,9 +70,7 @@ public class Sarrera {
 		if (getClass() != obj.getClass())
 			return false;
 		Sarrera other = (Sarrera) obj;
-		return Aretoa == other.Aretoa && CodSarrera == other.CodSarrera && Objects.equals(Fecha, other.Fecha)
-				&& Objects.equals(filmak, other.filmak) && Objects.equals(ordutegiak, other.ordutegiak)
-				&& prezioa == other.prezioa;
+		return  Objects.equals(CodSarrera, other.CodSarrera);
 	}
 	
 	

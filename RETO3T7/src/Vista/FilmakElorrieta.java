@@ -22,11 +22,14 @@ import javax.swing.JTextArea;
 import javax.swing.JScrollPane;
 import javax.swing.JButton;
 import javax.swing.JTable;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class FilmakElorrieta extends JFrame {
 
 	private JPanel contentPane;
 	private Filmak[] filmak = null;
+	Zinemak vent;
 	/**
 	 * Launch the application.
 	 */
@@ -53,6 +56,11 @@ public class FilmakElorrieta extends JFrame {
 		contentPane.add(txtrBruceBannerUn);
 		
 		JButton btnNewButton = new JButton("New button");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
 		btnNewButton.setIcon(new ImageIcon("C:\\Users\\IN1DAM\\Erronka3T7\\Imagenes\\hulk.jpg"));
 		btnNewButton.setBounds(318, 38, 89, 121);
 		contentPane.add(btnNewButton);

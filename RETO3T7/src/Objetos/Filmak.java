@@ -55,9 +55,7 @@ public class Filmak {
 		if (getClass() != obj.getClass())
 			return false;
 		Filmak other = (Filmak) obj;
-		return CodFilma == other.CodFilma && Objects.equals(NomFilma, other.NomFilma)
-				&& Objects.equals(generoa, other.generoa) && Objects.equals(iraupena, other.iraupena)
-				&& kostua == other.kostua;
+		return Objects.equals(CodFilma, other.CodFilma);
 	}
 	
 	

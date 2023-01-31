@@ -17,6 +17,7 @@ public class Aretoak {
 		this.fechas = fechas;
 		this.ordutegiak = ordutegiak;
 	}
+
 	public String getAretoIzena() {
 		return AretoIzena;
 	}
@@ -63,8 +64,6 @@ public class Aretoak {
 		if (getClass() != obj.getClass())
 			return false;
 		Aretoak other = (Aretoak) obj;
-		return Objects.equals(AretoIzena, other.AretoIzena) && CodAretoa == other.CodAretoa
-				&& Objects.equals(fechas, other.fechas) && Objects.equals(filmak, other.filmak)
-				&& Objects.equals(ordutegiak, other.ordutegiak);
+		return Objects.equals(CodAretoa, other.CodAretoa);
 	}
 }

@@ -98,7 +98,8 @@ public class Zinemak extends JFrame {
 		JButton btnBukatu = new JButton("Bukatu");
 		btnBukatu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(filmakKont=0) {
+				int filmaKont=0;
+				if(filmaKont<=0) {
 					ventLabur = new Laburpena(filmak);
 					ventLabur.setVisible(true);
 				}else {

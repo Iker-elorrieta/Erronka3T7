@@ -62,9 +62,7 @@ public class Bezeroa {
 		if (getClass() != obj.getClass())
 			return false;
 		Bezeroa other = (Bezeroa) obj;
-		return Objects.equals(Abizenak, other.Abizenak) && Objects.equals(DNI, other.DNI)
-				&& Objects.equals(izena, other.izena) && Objects.equals(pasahitza, other.pasahitza)
-				&& Objects.equals(sexua, other.sexua);
+		return Objects.equals(DNI, other.DNI);
 	}
 	
 }

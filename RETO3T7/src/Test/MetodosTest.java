@@ -2,7 +2,12 @@ package Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.sql.Date;
+
 import org.junit.jupiter.api.Test;
+
+import Objetos.Aretoak;
+import Objetos.Filmak;
 
 class MetodosTest {
 	
@@ -11,33 +16,12 @@ class MetodosTest {
 		
 	}
 	
-	@Test
-	void Aretoatest() {
-		
-	}
 	
-	@Test
-	void Bezeroatest() {
-		
-	}
 	
-	@Test
-	void Fechatest() {
-		
-	}
 	
-	@Test
-	void Filmaktest() {
-		
-	}
+	
+	
+	
 
-	@Test
-	void InfoCinetest() {
-		
-	}
 	
-	@Test
-	void Sarreratest() {
-		
-	}
 }
