@@ -10,6 +10,8 @@ import Objetos.Aretoak;
 import Objetos.Bezeroa;
 import Objetos.Filmak;
 import Objetos.InfoCine;
+import Objetos.Sarrera;
+import junit.framework.Assert;
 
 class ObjectuakTest {
 	String Aretoizena = "areto";
@@ -32,6 +34,13 @@ class ObjectuakTest {
 	
 	int Codzinema = 2;
 	int ZbkAretoak = 3;
+	
+	int CodSarrera=123;
+	Date Fecha1 = null;
+	String filmak="Hulk";
+	String ordutegiak="a";
+	int Aretoa=3;
+	int prezioa=4;
 	@Test
 	void Aretoatest() {
 		Aretoak areto = new Aretoak(Aretoizena, CodAretoa, Aretoizena, Fecha, Aretoizena);
@@ -45,6 +54,7 @@ class ObjectuakTest {
 		assertEquals(areto.getFechas(),Fecha);
 		assertEquals(areto.getFilmak(),Filmak);
 		assertEquals(areto.getOrdutegiak(),Ordutegiak);
+		assertEquals(areto.toString(),Aretoizena+CodAretoa+Aretoizena+Fecha+Aretoizena);
 	}
 	
 	@Test
@@ -60,11 +70,12 @@ class ObjectuakTest {
 		assertEquals(bezero.getAbizenak(),Abizenak);
 		assertEquals(bezero.getSexua(),sexua);
 		assertEquals(bezero.getPasahitza(),pasahitza);
+		assertEquals(bezero.toString(),DNI+Izena+Abizenak+sexua+pasahitza);
 	}
 	
 	@Test
 	void Filmaktest() {
-		Filmak filma = new Filmak();
+		Filmak filma = new Filmak(CodFilma, iraupena, generoa, kostua, NomFilma);
 		filma.setCodFilma(CodFilma);
 		filma.setIraupena(iraupena);
 		filma.setGeneroa(generoa);
@@ -75,6 +86,7 @@ class ObjectuakTest {
 		assertEquals(filma.getGeneroa(),generoa);
 		assertEquals(filma.getKostua(),kostua);
 		assertEquals(filma.getNomFilma(),NomFilma);
+		assertEquals(filma.toString(),CodFilma+iraupena+generoa+kostua+NomFilma);
 	}
 	
 	@Test
@@ -84,11 +96,25 @@ class ObjectuakTest {
 		zine.setZbkAretoak(ZbkAretoak);
 		assertEquals(zine.getCodzinema(),Codzinema);
 		assertEquals(zine.getZbkAretoak(),ZbkAretoak);
+		assertEquals(zine.toString(),Codzinema+ZbkAretoak);
 	}
 	
 	@Test
 	void Sarreratest() {
-		
+		Sarrera sarrera = new Sarrera(CodSarrera, Fecha, filmak, ordutegiak, Aretoa, prezioa);
+		sarrera.setCodSarrera(CodSarrera);
+		sarrera.setFilmak(Filmak);
+		sarrera.setFecha(Fecha);
+		sarrera.setOrdutegiak(Ordutegiak);
+		sarrera.setAretoa(Aretoa);
+		sarrera.setPrezioa(prezioa);
+		assertEquals(sarrera.getCodSarrera(),CodSarrera);
+		assertEquals(sarrera.getFecha(),Fecha);
+		assertEquals(sarrera.getFilmak(),generoa);
+		assertEquals(sarrera.getOrdutegiak(),ordutegiak);
+		assertEquals(sarrera.getAretoa(),Aretoa);
+		assertEquals(sarrera.getPrezioa(),prezioa);
+		assertEquals(sarrera.toString(),CodSarrera+filmak+Fecha+ordutegiak+Aretoa+prezioa);
 	}
 
 }

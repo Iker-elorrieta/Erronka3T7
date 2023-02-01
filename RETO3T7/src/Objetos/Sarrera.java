@@ -7,7 +7,7 @@ public class Sarrera {
 	private int CodSarrera;
 	private Date Fecha;
 	private String filmak;
-	private String ordutegiak;
+	private String Ordutegiak;
 	private int Aretoa;
 	private int prezioa;
 	
@@ -15,7 +15,7 @@ public class Sarrera {
 		CodSarrera = codSarrera;
 		Fecha = fecha;
 		this.filmak = filmak;
-		this.ordutegiak = ordutegiak;
+		this.Ordutegiak = ordutegiak;
 		Aretoa = aretoa;
 		this.prezioa = prezioa;
 	}
@@ -38,10 +38,10 @@ public class Sarrera {
 		this.filmak = filmak;
 	}
 	public String getOrdutegiak() {
-		return ordutegiak;
+		return Ordutegiak;
 	}
 	public void setOrdutegiak(String ordutegiak) {
-		this.ordutegiak = ordutegiak;
+		this.Ordutegiak = ordutegiak;
 	}
 	public int getAretoa() {
 		return Aretoa;
@@ -58,7 +58,7 @@ public class Sarrera {
 	@Override
 	public String toString() {
 		return "Sarrera [CodSarrera=" + CodSarrera + ", Fecha=" + Fecha + ", filmak=" + filmak + ", ordutegiak="
-				+ ordutegiak + ", Aretoa=" + Aretoa + ", prezioa=" + prezioa + "]";
+				+ Ordutegiak + ", Aretoa=" + Aretoa + ", prezioa=" + prezioa + "]";
 	}
 	
 	@Override

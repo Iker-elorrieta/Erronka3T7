@@ -8,6 +8,8 @@ import javax.swing.border.EmptyBorder;
 
 import Objetos.Filmak;
 import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextArea;
 
 public class FilmakMaxCenter extends JFrame {
 
@@ -35,6 +37,26 @@ public class FilmakMaxCenter extends JFrame {
 		JButton btnBueltatu = new JButton("Bueltatu");
 		btnBueltatu.setBounds(10, 227, 89, 23);
 		contentPane.add(btnBueltatu);
+		
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setBounds(10, 8, 46, 14);
+		contentPane.add(lblNewLabel);
+		
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.setBounds(298, 23, 89, 23);
+		contentPane.add(btnNewButton);
+		
+		JTextArea textArea = new JTextArea();
+		textArea.setBounds(10, 22, 257, 41);
+		contentPane.add(textArea);
+		
+		JLabel lblNewLabel_1 = new JLabel("New label");
+		lblNewLabel_1.setBounds(10, 74, 46, 14);
+		contentPane.add(lblNewLabel_1);
+		
+		JTextArea textArea_1 = new JTextArea();
+		textArea_1.setBounds(10, 93, 257, 22);
+		contentPane.add(textArea_1);
 	}
 
 }

@@ -40,38 +40,67 @@ public class FilmakElorrieta extends JFrame {
 	 */
 	public FilmakElorrieta(Filmak[] filmakE) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 472, 273);
+		setBounds(100, 100, 472, 377);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		/*Handia,2001: Odisea en el espacio Duración,Scary movie,Psicosis*/
-		JLabel lbl1Filma = new JLabel("HULK");
-		lbl1Filma.setBounds(20, 13, 46, 14);
-		contentPane.add(lbl1Filma);
-		
-		JTextArea txtrBruceBannerUn = new JTextArea();
-		txtrBruceBannerUn.setText("Bruce Banner,\r\nun investigador de gen\u00E9tica,\r\nabsorbi\u00F3 una dosis letal de rayos gamma.\r\n");
-		txtrBruceBannerUn.setBounds(10, 37, 274, 122);
-		contentPane.add(txtrBruceBannerUn);
-		
-		JButton btnNewButton = new JButton("New button");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-			}
-		});
-		btnNewButton.setIcon(new ImageIcon("C:\\Users\\IN1DAM\\Erronka3T7\\Imagenes\\hulk.jpg"));
-		btnNewButton.setBounds(318, 38, 89, 121);
-		contentPane.add(btnNewButton);
 		
 		JButton btnBueltatu = new JButton("Bueltatu");
-		btnBueltatu.setBounds(10, 200, 89, 23);
+		btnBueltatu.setBounds(10, 310, 89, 23);
 		contentPane.add(btnBueltatu);
 		
-		JScrollBar scrollBar = new JScrollBar();
-		scrollBar.setBounds(439, 0, 17, 234);
-		contentPane.add(scrollBar);
+		JLabel lblHandia = new JLabel("Handia");
+		lblHandia.setBounds(10, 2, 46, 14);
+		contentPane.add(lblHandia);
+		
+		JLabel lblOdisea = new JLabel("2001: Odisea en el espacio Duraci\u00F3n");
+		lblOdisea.setBounds(10, 98, 179, 14);
+		contentPane.add(lblOdisea);
+		
+		JLabel lblScary = new JLabel("Scary movie");
+		lblScary.setBounds(10, 181, 58, 14);
+		contentPane.add(lblScary);
+		
+		JLabel lblPsicosis = new JLabel("Psicosis");
+		lblPsicosis.setBounds(10, 246, 46, 14);
+		contentPane.add(lblPsicosis);
+		
+		JTextArea txtrEnMartn = new JTextArea();
+		txtrEnMartn.setText("En 1843, \nMart\u00EDn vuelve a su casa \ndespu\u00E9s de haber luchado \nen la Primera Guerra Carlista.");
+		txtrEnMartn.setBounds(10, 15, 257, 76);
+		contentPane.add(txtrEnMartn);
+		
+		JButton btnHandia = new JButton("Handia");
+		btnHandia.setBounds(277, 46, 89, 23);
+		contentPane.add(btnHandia);
+		
+		JTextArea txtrInspiradaEnLa = new JTextArea();
+		txtrInspiradaEnLa.setText("Inspirada en la novela hom\u00F3nima \r\nde Robert Bloch.");
+		txtrInspiradaEnLa.setBounds(10, 259, 257, 40);
+		contentPane.add(txtrInspiradaEnLa);
+		
+		JButton btnOdisea = new JButton("Odisea");
+		btnOdisea.setBounds(277, 131, 89, 23);
+		contentPane.add(btnOdisea);
+		
+		JTextArea txtrLaPelculaSupone = new JTextArea();
+		txtrLaPelculaSupone.setText("La pel\u00EDcula supone un \"viaje\" a \r\ntrav\u00E9s de diferentes periodos \r\nde la historia de la humanidad.");
+		txtrLaPelculaSupone.setBounds(10, 112, 257, 58);
+		contentPane.add(txtrLaPelculaSupone);
+		
+		JTextArea txtrEsUnaPelcula = new JTextArea();
+		txtrEsUnaPelcula.setText("Es una pel\u00EDcula estadounidense \nde humor negro del a\u00F1o 2000.");
+		txtrEsUnaPelcula.setBounds(10, 195, 257, 40);
+		contentPane.add(txtrEsUnaPelcula);
+		
+		JButton btnScary = new JButton("Scary Movie");
+		btnScary.setBounds(277, 206, 101, 23);
+		contentPane.add(btnScary);
+		
+		JButton btnPsicosis = new JButton("Psicosis");
+		btnPsicosis.setBounds(277, 271, 89, 23);
+		contentPane.add(btnPsicosis);
 		
 	}
 }
