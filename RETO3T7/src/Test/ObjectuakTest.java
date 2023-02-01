@@ -54,7 +54,8 @@ class ObjectuakTest {
 		assertEquals(areto.getFechas(),Fecha);
 		assertEquals(areto.getFilmak(),Filmak);
 		assertEquals(areto.getOrdutegiak(),Ordutegiak);
-		assertEquals(areto.toString(),Aretoizena+CodAretoa+Aretoizena+Fecha+Aretoizena);
+		String expected=Aretoizena+CodAretoa+Aretoizena+Fecha+Aretoizena;
+		assertEquals(expected,areto.toString());
 	}
 	
 	@Test
@@ -70,7 +71,8 @@ class ObjectuakTest {
 		assertEquals(bezero.getAbizenak(),Abizenak);
 		assertEquals(bezero.getSexua(),sexua);
 		assertEquals(bezero.getPasahitza(),pasahitza);
-		assertEquals(bezero.toString(),DNI+Izena+Abizenak+sexua+pasahitza);
+		String expected=DNI+Izena+Abizenak+sexua+pasahitza;
+		assertEquals(expected,bezero.toString());
 	}
 	
 	@Test
@@ -86,7 +88,8 @@ class ObjectuakTest {
 		assertEquals(filma.getGeneroa(),generoa);
 		assertEquals(filma.getKostua(),kostua);
 		assertEquals(filma.getNomFilma(),NomFilma);
-		assertEquals(filma.toString(),CodFilma+iraupena+generoa+kostua+NomFilma);
+		String expected =CodFilma+iraupena+generoa+kostua+NomFilma ;
+		assertEquals(expected,filma.toString());
 	}
 	
 	@Test
@@ -96,7 +99,8 @@ class ObjectuakTest {
 		zine.setZbkAretoak(ZbkAretoak);
 		assertEquals(zine.getCodzinema(),Codzinema);
 		assertEquals(zine.getZbkAretoak(),ZbkAretoak);
-		assertEquals(zine.toString(),Codzinema+ZbkAretoak);
+		int expected=CodAretoa+ZbkAretoak;
+		assertEquals(expected,zine.toString());
 	}
 	
 	@Test
@@ -110,11 +114,12 @@ class ObjectuakTest {
 		sarrera.setPrezioa(prezioa);
 		assertEquals(sarrera.getCodSarrera(),CodSarrera);
 		assertEquals(sarrera.getFecha(),Fecha);
-		assertEquals(sarrera.getFilmak(),generoa);
+		assertEquals(sarrera.getFilmak(),filmak);
 		assertEquals(sarrera.getOrdutegiak(),ordutegiak);
 		assertEquals(sarrera.getAretoa(),Aretoa);
 		assertEquals(sarrera.getPrezioa(),prezioa);
-		assertEquals(sarrera.toString(),CodSarrera+filmak+Fecha+ordutegiak+Aretoa+prezioa);
+		String expected=filmak+ordutegiak+Aretoa+prezioa+CodSarrera+Fecha;
+		assertEquals(expected,sarrera.toString());
 	}
 
 }

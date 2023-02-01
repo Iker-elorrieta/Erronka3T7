@@ -61,7 +61,7 @@ public class Sarrera {
 				+ Ordutegiak + ", Aretoa=" + Aretoa + ", prezioa=" + prezioa + "]";
 	}
 	
-	@Override
+	/*@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
@@ -70,8 +70,10 @@ public class Sarrera {
 		if (getClass() != obj.getClass())
 			return false;
 		Sarrera other = (Sarrera) obj;
-		return  Objects.equals(CodSarrera, other.CodSarrera);
-	}
+		return Aretoa == other.Aretoa && CodSarrera == other.CodSarrera && Objects.equals(Fecha, other.Fecha)
+				&& Objects.equals(Ordutegiak, other.Ordutegiak) && Objects.equals(filmak, other.filmak)
+				&& prezioa == other.prezioa;
+	}*/
 	
 	
 }
