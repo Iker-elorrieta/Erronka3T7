@@ -55,12 +55,12 @@ public class Bezeroa {
 	
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
+		/*if (this == obj)
+			return true;*/
 		if (obj == null)
 			return false;
-		if (getClass() != obj.getClass())
-			return false;
+		/*if (getClass() != obj.getClass())
+			return false;*/
 		Bezeroa other = (Bezeroa) obj;
 		return Objects.equals(DNI, other.DNI);
 	}

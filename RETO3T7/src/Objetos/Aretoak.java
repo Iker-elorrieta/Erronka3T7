@@ -10,7 +10,7 @@ public class Aretoak {
 	private Date fechas;
 	private String ordutegiak;	
 	
-	public Aretoak(String aretoIzena, int codAretoa, String filmak, Date fechas, String ordutegiak) {
+	public Aretoak(String aretoIzena, int codAretoa, Date fechas, String filmak, String ordutegiak) {
 		AretoIzena = aretoIzena;
 		CodAretoa = codAretoa;
 		this.filmak = filmak;
@@ -57,12 +57,12 @@ public class Aretoak {
 	
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
+		/*if (this == obj)
+			return true;*/
 		if (obj == null)
 			return false;
-		if (getClass() != obj.getClass())
-			return false;
+		/*if (getClass() != obj.getClass())
+			return false;*/
 		Aretoak other = (Aretoak) obj;
 		return Objects.equals(CodAretoa, other.CodAretoa);
 	}
