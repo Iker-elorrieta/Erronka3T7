@@ -48,7 +48,7 @@ public class FilmakGetxo extends JFrame {
 		contentPane.add(lblSchindler);
 		
 		JTextArea txtrSchindlerBuscabaHacer = new JTextArea();
-		txtrSchindlerBuscabaHacer.setText("Schindler busca hacer fortuna en \r\nla Segunda Guerra Mundial \r\nmediante los nazis.");
+		txtrSchindlerBuscabaHacer.setText("Schindlerrek dirutza egin nahi \ndu nazien bidez Bigarren Mundu \nGerran.");
 		txtrSchindlerBuscabaHacer.setBounds(10, 23, 265, 58);
 		contentPane.add(txtrSchindlerBuscabaHacer);
 		
@@ -61,7 +61,7 @@ public class FilmakGetxo extends JFrame {
 		contentPane.add(lblFrankenstein);
 		
 		JTextArea txtrContinuacinDeLa = new JTextArea();
-		txtrContinuacinDeLa.setText("Continuaci\u00F3n de la historia de \r\nMary Shelley, donde el monstruo\r\nquiere que el Bar\u00F3n haga un amigo.");
+		txtrContinuacinDeLa.setText("Mary Shelleyren historiaren \njarraipena. Baroiak lagun bat \negitea nahi du munstroak.");
 		txtrContinuacinDeLa.setBounds(10, 100, 265, 58);
 		contentPane.add(txtrContinuacinDeLa);
 		
@@ -74,7 +74,7 @@ public class FilmakGetxo extends JFrame {
 		contentPane.add(lblLebowsky);
 		
 		JTextArea txtrUnBorrachoDe = new JTextArea();
-		txtrUnBorrachoDe.setText("Un borracho de Los \u00C1ngeles y sus \ncompa\u00F1eros son secuestrados.");
+		txtrUnBorrachoDe.setText("Los Angelesko mozkor bat eta \nharen lagunak bahitu dituzte.");
 		txtrUnBorrachoDe.setBounds(10, 181, 265, 40);
 		contentPane.add(txtrUnBorrachoDe);
 		
@@ -91,7 +91,7 @@ public class FilmakGetxo extends JFrame {
 		contentPane.add(btnresplandor);
 		
 		JTextArea txtrJackTorranceEs = new JTextArea();
-		txtrJackTorranceEs.setText("Un hombre que se va a vivir con \nsu familia a un hotel con la \nesperanza de salir del bloqueo \ncreativo de su escritura.");
+		txtrJackTorranceEs.setText("Familiarekin hotel batera \nbizitzera joan da gizon bat, \nbere idazkeraren sormenezko \nblokeotik ateratzeko asmoz.");
 		txtrJackTorranceEs.setBounds(10, 239, 265, 73);
 		contentPane.add(txtrJackTorranceEs);
 		

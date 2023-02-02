@@ -54,7 +54,7 @@ public class Zinemak extends JFrame {
 		lblZineAretoak.setBounds(10, 25, 145, 14);
 		contentPane.add(lblZineAretoak);
 		
-		JButton btnElorrieta = new JButton("Elorrieta-errekamari Zinema");
+		JButton btnElorrieta = new JButton("Elorrieta-errekamari\nZinema");
 		btnElorrieta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ventElorrieta = new FilmakElorrieta(filmak);
@@ -62,7 +62,7 @@ public class Zinemak extends JFrame {
 				
 			}
 		});
-		btnElorrieta.setBounds(20, 50, 165, 34);
+		btnElorrieta.setBounds(10, 50, 184, 23);
 		contentPane.add(btnElorrieta);
 		
 		JButton btnGetxo = new JButton("Getxo Zinema");
@@ -82,7 +82,7 @@ public class Zinemak extends JFrame {
 				ventZubiarte.setVisible(true);
 			}
 		});
-		btnZubiarte.setBounds(20, 121, 165, 23);
+		btnZubiarte.setBounds(10, 121, 165, 23);
 		contentPane.add(btnZubiarte);
 		
 		JButton btnMaxCenter = new JButton("Max Center Zinema");
@@ -107,7 +107,7 @@ public class Zinemak extends JFrame {
 				}
 			}
 		});
-		btnBukatu.setBounds(20, 198, 89, 23);
+		btnBukatu.setBounds(10, 198, 89, 23);
 		contentPane.add(btnBukatu);
 	}
 }

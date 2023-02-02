@@ -27,7 +27,7 @@ public class FilmakMaxCenter extends JFrame {
 	 */
 	public FilmakMaxCenter(Filmak[] filmakM) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 490, 439);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -35,28 +35,59 @@ public class FilmakMaxCenter extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnBueltatu = new JButton("Bueltatu");
-		btnBueltatu.setBounds(10, 227, 89, 23);
+		btnBueltatu.setBounds(10, 366, 89, 23);
 		contentPane.add(btnBueltatu);
 		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(10, 8, 46, 14);
-		contentPane.add(lblNewLabel);
+		JLabel lblSimios = new JLabel("El planeta de los simios");
+		lblSimios.setBounds(10, 8, 109, 14);
+		contentPane.add(lblSimios);
 		
-		JButton btnNewButton = new JButton("New button");
-		btnNewButton.setBounds(298, 23, 89, 23);
-		contentPane.add(btnNewButton);
+		JButton btnSimios = new JButton("El planeta de los simios");
+		btnSimios.setBounds(294, 46, 149, 23);
+		contentPane.add(btnSimios);
 		
-		JTextArea textArea = new JTextArea();
-		textArea.setBounds(10, 22, 257, 41);
-		contentPane.add(textArea);
+		JTextArea txtrEnUnaMisin = new JTextArea();
+		txtrEnUnaMisin.setText("Ohiko misio batean, astronauta \nbat planeta bitxi batera iritsi \nda. Tximinoek gobernatzen dute \nplaneta hau.");
+		txtrEnUnaMisin.setBounds(10, 22, 274, 76);
+		contentPane.add(txtrEnUnaMisin);
 		
-		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setBounds(10, 74, 46, 14);
-		contentPane.add(lblNewLabel_1);
+		JLabel lblBrian = new JLabel("La vida de Brian");
+		lblBrian.setBounds(10, 99, 89, 14);
+		contentPane.add(lblBrian);
 		
-		JTextArea textArea_1 = new JTextArea();
-		textArea_1.setBounds(10, 93, 257, 22);
-		contentPane.add(textArea_1);
+		JTextArea txtrEnLapoca = new JTextArea();
+		txtrEnLapoca.setText("Bibliaren garaian, badirudi \ngizon bat Mesias dela, eta \nerlijio-mugimendu baten \nburuzagitzat ikusten da.");
+		txtrEnLapoca.setBounds(10, 115, 274, 72);
+		contentPane.add(txtrEnLapoca);
+		
+		JButton btnBrian = new JButton("La vida de Brian");
+		btnBrian.setBounds(298, 140, 149, 23);
+		contentPane.add(btnBrian);
+		
+		JLabel lblCadena = new JLabel("Cadena Perpetua");
+		lblCadena.setBounds(10, 190, 89, 14);
+		contentPane.add(lblCadena);
+		
+		JTextArea txtrAndrewDufresneGizon = new JTextArea();
+		txtrAndrewDufresneGizon.setText("Emaztearen hilketa leporatu \ndiote Andrew Dufresne gizon \nerrugabeari. Eta betiko \nkartzela-zigorra ezarri diote.");
+		txtrAndrewDufresneGizon.setBounds(10, 205, 274, 72);
+		contentPane.add(txtrAndrewDufresneGizon);
+		
+		JButton btnCadena = new JButton("Cadena Perpetua");
+		btnCadena.setBounds(298, 229, 149, 23);
+		contentPane.add(btnCadena);
+		
+		JLabel lblDrácula = new JLabel("Dr\u00E1cula");
+		lblDrácula.setBounds(10, 278, 52, 14);
+		contentPane.add(lblDrácula);
+		
+		JTextArea txtrBanpiroBihurtuAurretik = new JTextArea();
+		txtrBanpiroBihurtuAurretik.setText("Banpiro bihurtu aurretik, \nDrakula kondea Vlad printzea zen, \neta, maitearen heriotzaren berri \nizan zuenean, deabruari saldu zion arima.");
+		txtrBanpiroBihurtuAurretik.setBounds(10, 287, 274, 76);
+		contentPane.add(txtrBanpiroBihurtuAurretik);
+		
+		JButton btnDrácula = new JButton("Dr\u00E1cula");
+		btnDrácula.setBounds(332, 310, 89, 23);
+		contentPane.add(btnDrácula);
 	}
-
 }
