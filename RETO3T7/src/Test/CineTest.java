@@ -4,14 +4,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import Objetos.InfoCine;
+import Objetos.Zinema;
 
 class CineTest {
 	
 	int Codzinema = 2;
 	int ZbkAretoak = 3;
-	InfoCine zine = new InfoCine(Codzinema, ZbkAretoak);
-	InfoCine zine2 = new InfoCine(Codzinema, ZbkAretoak);
+	Zinema zine = new Zinema(Codzinema, ZbkAretoak);
+	Zinema zine2 = new Zinema(Codzinema, ZbkAretoak);
 	@Test
 	void GetySettest() {
 		zine.setCodzinema(Codzinema);

@@ -1,24 +1,19 @@
 package Objetos;
 
 import java.sql.Date;
+import java.util.Arrays;
 import java.util.Objects;
+
+import Vista.Ordutegiak;
 
 public class Sarrera {
 	private int CodSarrera;
 	private Date Fecha;
-	private String filmak;
-	private String Ordutegiak;
+	private Filmak filma = new Filmak();
+	private Ordutegiak ordutegi = new Ordutegiak();
 	private int Aretoa;
 	private int prezioa;
 	
-	public Sarrera(int codSarrera, Date fecha, String filmak, String ordutegiak, int aretoa, int prezioa) {
-		CodSarrera = codSarrera;
-		Fecha = fecha;
-		this.filmak = filmak;
-		this.Ordutegiak = ordutegiak;
-		Aretoa = aretoa;
-		this.prezioa = prezioa;
-	}
 	public int getCodSarrera() {
 		return CodSarrera;
 	}
@@ -31,17 +26,17 @@ public class Sarrera {
 	public void setFecha(Date fecha) {
 		Fecha = fecha;
 	}
-	public String getFilmak() {
-		return filmak;
+	public Filmak getFilma() {
+		return filma;
 	}
-	public void setFilmak(String filmak) {
-		this.filmak = filmak;
+	public void setFilma(Filmak filma) {
+		this.filma = filma;
 	}
-	public String getOrdutegiak() {
-		return Ordutegiak;
+	public Ordutegiak getOrdutegi() {
+		return ordutegi;
 	}
-	public void setOrdutegiak(String ordutegiak) {
-		this.Ordutegiak = ordutegiak;
+	public void setOrdutegi(Ordutegiak ordutegi) {
+		this.ordutegi = ordutegi;
 	}
 	public int getAretoa() {
 		return Aretoa;
@@ -54,13 +49,13 @@ public class Sarrera {
 	}
 	public void setPrezioa(int prezioa) {
 		this.prezioa = prezioa;
-	}
+	}	
+	
 	@Override
 	public String toString() {
-		return "Sarrera [CodSarrera=" + CodSarrera + ", Fecha=" + Fecha + ", filmak=" + filmak + ", ordutegiak="
-				+ Ordutegiak + ", Aretoa=" + Aretoa + ", prezioa=" + prezioa + "]";
+		return "Sarrera [CodSarrera=" + CodSarrera + ", Fecha=" + Fecha + ", filma=" + filma + ", ordutegi=" + ordutegi
+				+ ", Aretoa=" + Aretoa + ", prezioa=" + prezioa + "]";
 	}
-	
 	@Override
 	public boolean equals(Object obj) {
 		/*if (this == obj)

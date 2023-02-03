@@ -9,14 +9,6 @@ public class Filmak {
 	private int kostua;
 	private String NomFilma;
 	
-	
-	public Filmak(int codFilma, String iraupena, String generoa, int kostua, String nomFilma) {
-		CodFilma = codFilma;
-		this.iraupena = iraupena;
-		this.generoa = generoa;
-		this.kostua = kostua;
-		NomFilma = nomFilma;
-	}
 	public int getCodFilma() {
 		return CodFilma;
 	}

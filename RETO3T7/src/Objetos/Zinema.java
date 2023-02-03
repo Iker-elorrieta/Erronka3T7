@@ -3,16 +3,10 @@ package Objetos;
 import java.util.Date;
 import java.util.Objects;
 
-public class InfoCine {
+public class Zinema {
 	private int Codzinema;
 	private int ZbkAretoak;
 	
-	
-	
-	public InfoCine(int codzinema, int zbkAretoak) {
-		Codzinema = codzinema;
-		ZbkAretoak = zbkAretoak;
-	}
 	public int getCodzinema() {
 		return Codzinema;
 	}
@@ -39,7 +33,7 @@ public class InfoCine {
 			return false;
 		/*if (getClass() != obj.getClass())
 			return false;*/
-		InfoCine other = (InfoCine) obj;
+		Zinema other = (Zinema) obj;
 		return Objects.equals(Codzinema, other.Codzinema);
 	}
 	

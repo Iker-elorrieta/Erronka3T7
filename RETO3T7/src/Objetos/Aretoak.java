@@ -1,24 +1,24 @@
 package Objetos;
 
 import java.sql.Date;
+import java.util.Arrays;
 import java.util.Objects;
+
+import Vista.Ordutegiak;
 
 
 public class Aretoak {
 	private String AretoIzena;
 	private int CodAretoa;
-	private String filmak;
 	private Date fechas;
-	private String ordutegiak;	
-	
-	public Aretoak(String aretoIzena, int codAretoa, Date fechas, String filmak, String ordutegiak) {
-		AretoIzena = aretoIzena;
-		CodAretoa = codAretoa;
-		this.filmak = filmak;
-		this.fechas = fechas;
-		this.ordutegiak = ordutegiak;
-	}
+	private Ordutegiak ordutegi = new Ordutegiak();	
 
+	public Aretoak(String aretoIzena, int CodAretoa, Date fecha,Filmak filma, Ordutegiak ordutegiak) {
+		this.AretoIzena = aretoIzena;
+		this.CodAretoa = CodAretoa;
+		this.fechas = fecha;
+		this.ordutegi = ordutegiak;
+	}
 	public String getAretoIzena() {
 		return AretoIzena;
 	}
@@ -31,31 +31,22 @@ public class Aretoak {
 	public void setCodAretoa(int codAretoa) {
 		CodAretoa = codAretoa;
 	}
-	public String getFilmak() {
-		return filmak;
-	}
-	public void setFilmak(String filmak) {
-		this.filmak = filmak;
-	}
 	public Date getFechas() {
 		return fechas;
 	}
 	public void setFechas(Date fechas) {
 		this.fechas = fechas;
 	}
-	public String getOrdutegiak() {
-		return ordutegiak;
+	public Ordutegiak getOrdutegi() {
+		return ordutegi;
 	}
-	public void setOrdutegiak(String ordutegiak) {
-		this.ordutegiak = ordutegiak;
+	public void setOrdutegi(Ordutegiak ordutegiak) {
+		this.ordutegi = ordutegiak;
 	}
-	
 	@Override
 	public String toString() {
-		return "Aretoak [AretoIzena=" + AretoIzena + ", CodAretoa=" + CodAretoa + ", filmak=" + filmak + ", fechas="
-				+ fechas + ", ordutegiak=" + ordutegiak + "]";
+		return "Aretoak [AretoIzena=" + AretoIzena + ", CodAretoa=" + CodAretoa + ", fechas=" + fechas + ", ordutegi=" + ordutegi + "]";
 	}
-	
 	@Override
 	public boolean equals(Object obj) {
 		/*if (this == obj)

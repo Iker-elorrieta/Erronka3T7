@@ -9,21 +9,24 @@ import Objetos.Bezeroa;
 class BezeroTest {
 	String DNI = "12345678P";
 	String Izena = "Andoni";
-	String Abizenak = "Fernandez";
+	String Abizenak1 = "Fernandez";
+	String Abizenak2 = "Lombera";
 	String sexua = "g";
 	String pasahitza = "1234";
-	Bezeroa bezero = new Bezeroa(DNI, Izena, Abizenak, sexua, pasahitza);
-	Bezeroa bezero2 = new Bezeroa(DNI, Izena, Abizenak, sexua, pasahitza);
+	Bezeroa bezero = new Bezeroa(DNI, Izena, Abizenak1, sexua, pasahitza, Abizenak2);
+	Bezeroa bezero2 = new Bezeroa(DNI, Izena, Abizenak1, sexua, pasahitza, Abizenak2);
 	@Test
 	void GetyTesttest() {
 			bezero.setDNI(DNI);
 			bezero.setIzena(Izena);
-			bezero.setAbizenak(Abizenak);
+			bezero.setAbizena1(Abizenak1);
+			bezero.setAbizena2(Abizenak2);
 			bezero.setSexua(sexua);
 			bezero.setPasahitza(pasahitza);
 			assertEquals(bezero.getDNI(),DNI);
 			assertEquals(bezero.getIzena(),Izena);
-			assertEquals(bezero.getAbizenak(),Abizenak);
+			assertEquals(bezero.getAbizena1(),Abizenak1);
+			assertEquals(bezero.getAbizena2(),Abizenak2);
 			assertEquals(bezero.getSexua(),sexua);
 			assertEquals(bezero.getPasahitza(),pasahitza);
 	}
@@ -35,7 +38,7 @@ class BezeroTest {
 	}
 	@Test
 	void toStringtest() {
-		String expected="Bezeroa [DNI=12345678P, izena=Andoni, Abizenak=Fernandez, sexua=g, pasahitza=1234]";
+		String expected="Bezeroa [DNI=12345678P, izena=Andoni, Abizena1=Fernandez, Abizena2=g, sexua=1234, pasahitza=Lombera]";
 		assertEquals(expected,bezero.toString());
 	}
 	

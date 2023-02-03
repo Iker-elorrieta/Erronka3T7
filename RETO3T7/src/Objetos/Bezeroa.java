@@ -5,17 +5,38 @@ import java.util.Objects;
 public class Bezeroa {
 	private String DNI;
 	private String izena;
-	private String Abizenak;
+	private String Abizena1;
+	private String Abizena2;
 	private String sexua;
 	private String pasahitza;
 	
-	public Bezeroa(String dNI, String izena, String abizenak, String sexua, String pasahitza) {
+	
+	public Bezeroa(String dNI, String izena, String abizena1, String abizena2, String sexua, String pasahitza) {
+		super();
 		DNI = dNI;
 		this.izena = izena;
-		Abizenak = abizenak;
+		Abizena1 = abizena1;
+		Abizena2 = abizena2;
 		this.sexua = sexua;
 		this.pasahitza = pasahitza;
 	}
+	
+	public String getAbizena1() {
+		return Abizena1;
+	}
+
+	public void setAbizena1(String abizena1) {
+		Abizena1 = abizena1;
+	}
+
+	public String getAbizena2() {
+		return Abizena2;
+	}
+
+	public void setAbizena2(String abizena2) {
+		Abizena2 = abizena2;
+	}
+
 	public String getDNI() {
 		return DNI;
 	}
@@ -27,12 +48,6 @@ public class Bezeroa {
 	}
 	public void setIzena(String izena) {
 		this.izena = izena;
-	}
-	public String getAbizenak() {
-		return Abizenak;
-	}
-	public void setAbizenak(String abizenak) {
-		Abizenak = abizenak;
 	}
 	public String getSexua() {
 		return sexua;
@@ -47,12 +62,14 @@ public class Bezeroa {
 		this.pasahitza = pasahitza;
 	}
 	
+	
+	
 	@Override
 	public String toString() {
-		return "Bezeroa [DNI=" + DNI + ", izena=" + izena + ", Abizenak=" + Abizenak + ", sexua=" + sexua
-				+ ", pasahitza=" + pasahitza + "]";
+		return "Bezeroa [DNI=" + DNI + ", izena=" + izena + ", Abizena1=" + Abizena1 + ", Abizena2=" + Abizena2
+				+ ", sexua=" + sexua + ", pasahitza=" + pasahitza + "]";
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		/*if (this == obj)
