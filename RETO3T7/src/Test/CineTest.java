@@ -10,8 +10,8 @@ class CineTest {
 	
 	int Codzinema = 2;
 	int ZbkAretoak = 3;
-	Zinema zine = new Zinema(Codzinema, ZbkAretoak);
-	Zinema zine2 = new Zinema(Codzinema, ZbkAretoak);
+	Zinema zine = new Zinema();
+	Zinema zine2 = new Zinema();
 	@Test
 	void GetySettest() {
 		zine.setCodzinema(Codzinema);

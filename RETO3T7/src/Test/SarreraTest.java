@@ -28,7 +28,7 @@ class SarreraTest {
 		sarrera.setCodSarrera(CodSarrera);
 		sarrera.setFecha(Fecha);
 		sarrera.setFilma(filma);
-		sarrera.getOrdutegi(ordutegiak);
+		sarrera.setOrdutegi(null);
 		sarrera.setAretoa(Aretoa);
 		sarrera.setPrezioa(prezioa);
 		assertEquals(sarrera.getCodSarrera(),CodSarrera);

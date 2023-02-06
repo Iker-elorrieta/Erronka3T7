@@ -13,12 +13,7 @@ public class Aretoak {
 	private Date fechas;
 	private Ordutegiak ordutegi = new Ordutegiak();	
 
-	public Aretoak(String aretoIzena, int CodAretoa, Date fecha,Filmak filma, Ordutegiak ordutegiak) {
-		this.AretoIzena = aretoIzena;
-		this.CodAretoa = CodAretoa;
-		this.fechas = fecha;
-		this.ordutegi = ordutegiak;
-	}
+	
 	public String getAretoIzena() {
 		return AretoIzena;
 	}
