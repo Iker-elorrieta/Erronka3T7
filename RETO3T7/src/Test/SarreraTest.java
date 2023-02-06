@@ -3,42 +3,36 @@ package Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.sql.Date;
+import java.util.Calendar;
 
 import org.junit.jupiter.api.Test;
 
 import Objetos.Aretoak;
 import Objetos.Bezeroa;
-import Objetos.Filmak;
 import Objetos.Ordutegiak;
-import Objetos.Zinema;
 import Objetos.Sarrera;
 
 
 class SarreraTest {
 	int CodSarrera=123;
-	Date Fecha = null;
-	int Aretoa=3;
 	int prezioa=4;
-	Filmak filma = new Filmak();
+	Aretoak areto = new Aretoak();
 	Ordutegiak ordutegiak = new Ordutegiak();
+	Bezeroa beze =new Bezeroa();
 	Sarrera sarrera = new Sarrera();
 	Sarrera sarrera2 = new Sarrera();
+
 	@Test
 	void GetySettest() {
 		sarrera.setCodSarrera(CodSarrera);
-		sarrera.setFecha(Fecha);
-		sarrera.setFilma(filma);
 		sarrera.setOrdutegi(null);
-		sarrera.setAretoa(Aretoa);
+		sarrera.setAreto(null);
 		sarrera.setPrezioa(prezioa);
-		assertEquals(sarrera.getCodSarrera(),CodSarrera);
-		assertEquals(sarrera.getFecha(),Fecha);
-		assertEquals(sarrera.getFilma(),filma);
-		assertEquals(sarrera.getOrdutegi(),ordutegiak);
-		assertEquals(sarrera.getAretoa(),Aretoa);
 		assertEquals(sarrera.getPrezioa(),prezioa);
-	
-	}
+		assertEquals(sarrera.getCodSarrera(),CodSarrera);
+		assertEquals(sarrera.getAreto(),areto);
+		assertEquals(sarrera.getOrdutegi(),ordutegiak);
+		}
 	@Test
 	void Equalstest() {
 		sarrera.equals(sarrera2);
@@ -47,14 +41,7 @@ class SarreraTest {
 		}
 		@Test
 		void toStringtest() {
-			String expected="Sarrera [CodSarrera=123, Fecha=null, filmak=Hulk, ordutegiak=a, Aretoa=3, prezioa=4]";
+			String expected="Sarrera [CodSarrera=123, Fecha=null, filmak=Hulk, prezioa=4]";
 			assertEquals(expected,sarrera.toString());
 		}
-	
-
-	
-	
-	
-	
-
 }

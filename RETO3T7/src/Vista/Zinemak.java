@@ -22,6 +22,7 @@ public class Zinemak extends JFrame {
 	FilmakMaxCenter ventMax;
 	Laburpena ventLabur;
 	private Filmak[] filmak = new Filmak[0];
+	Zinemak ventZinema;
 	/**
 	 * Launch the application.
 	 */
@@ -54,7 +55,7 @@ public class Zinemak extends JFrame {
 		lblZineAretoak.setBounds(10, 25, 145, 14);
 		contentPane.add(lblZineAretoak);
 		
-		JButton btnElorrieta = new JButton("Elorrieta-errekamari\nZinema");
+		JButton btnElorrieta = new JButton("Elorrieta-errekamari \nZinema");
 		btnElorrieta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ventElorrieta = new FilmakElorrieta(filmak);
@@ -62,7 +63,7 @@ public class Zinemak extends JFrame {
 				
 			}
 		});
-		btnElorrieta.setBounds(10, 50, 184, 23);
+		btnElorrieta.setBounds(10, 50, 217, 23);
 		contentPane.add(btnElorrieta);
 		
 		JButton btnGetxo = new JButton("Getxo Zinema");
@@ -98,13 +99,8 @@ public class Zinemak extends JFrame {
 		JButton btnBukatu = new JButton("Bukatu");
 		btnBukatu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int filmaKont=0;
-				if(filmaKont<=0) {
-					ventLabur = new Laburpena(filmak);
-					ventLabur.setVisible(true);
-				}else {
-					
-				}
+				ventZinema = new Zinemak();
+				ventZinema.setVisible(false);
 			}
 		});
 		btnBukatu.setBounds(10, 198, 89, 23);

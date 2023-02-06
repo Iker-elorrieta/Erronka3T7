@@ -1,19 +1,24 @@
 package Objetos;
 
 import java.sql.Date;
-import java.util.Arrays;
 import java.util.Objects;
 
-import Vista.Ordutegiak;
+import Vista.Saioak;
 
 
 public class Aretoak {
 	private String AretoIzena;
 	private int CodAretoa;
 	private Date fechas;
-	private Ordutegiak ordutegi = new Ordutegiak();	
+	private Saioak ordutegi = new Saioak();	
 
 	
+	public Aretoak() {
+		AretoIzena = getAretoIzena();
+		CodAretoa = getCodAretoa();
+		fechas = getFechas();
+		ordutegi = getOrdutegi();
+	}
 	public String getAretoIzena() {
 		return AretoIzena;
 	}
@@ -32,10 +37,10 @@ public class Aretoak {
 	public void setFechas(Date fechas) {
 		this.fechas = fechas;
 	}
-	public Ordutegiak getOrdutegi() {
+	public Saioak getOrdutegi() {
 		return ordutegi;
 	}
-	public void setOrdutegi(Ordutegiak ordutegiak) {
+	public void setOrdutegi(Saioak ordutegiak) {
 		this.ordutegi = ordutegiak;
 	}
 	@Override
