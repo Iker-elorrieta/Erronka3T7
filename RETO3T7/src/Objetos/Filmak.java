@@ -1,5 +1,6 @@
 package Objetos;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 public class Filmak {
@@ -8,6 +9,7 @@ public class Filmak {
 	private String generoa;
 	private int kostua;
 	private String NomFilma;
+	private Filmak[] FILMAK = new Filmak[10];
 	
 	public int getCodFilma() {
 		return CodFilma;
@@ -40,11 +42,18 @@ public class Filmak {
 	public void setNomFilma(String nomFilma) {
 		NomFilma = nomFilma;
 	}
+	public Filmak[] getFILMAK() {
+		return FILMAK;
+	}
+	public void setFILMAK(Filmak[] fILMAK) {
+		FILMAK = fILMAK;
+	}
+	
 	
 	@Override
 	public String toString() {
 		return "Filmak [CodFilma=" + CodFilma + ", iraupena=" + iraupena + ", generoa=" + generoa + ", kostua=" + kostua
-				+ ", NomFilma=" + NomFilma + "]";
+				+ ", NomFilma=" + NomFilma + ", FILMAK=" + Arrays.toString(FILMAK) + "]";
 	}
 	@Override
 	public boolean equals(Object obj) {

@@ -40,7 +40,7 @@ class SarreraTest {
 		}
 		@Test
 		void toStringtest() {
-			String expected="Sarrera [CodSarrera=0, filma=Filmak [CodFilma=0, iraupena=null, generoa=null, kostua=0, NomFilma=null], Aretoa=Aretoak [AretoIzena=null, CodAretoa=0, ordutegi=Ordutegiak [CodOrdutegiak=0, Fecha=null, filma=Filmak [CodFilma=0, iraupena=null, generoa=null, kostua=0, NomFilma=null], zine=InfoCine [Codzinema=0, ZbkAretoak=0]]], prezioa=0]";
+			String expected="Sarrera [CodSarrera=0, filma=Filmak [CodFilma=0, iraupena=null, generoa=null, kostua=0, NomFilma=null, FILMAK=[null, null, null, null, null, null, null, null, null, null]], Aretoa=Aretoak [AretoIzena=null, CodAretoa=0], prezioa=0]";
 			assertEquals(expected,sarrera.toString());
 		}
 	
