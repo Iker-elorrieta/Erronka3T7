@@ -10,6 +10,7 @@ public class Bezeroa {
 	private String sexua;
 	private String pasahitza;
 	
+	
 	public Bezeroa() {
 		DNI = getDNI();
 		izena = getIzena();

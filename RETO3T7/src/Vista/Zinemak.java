@@ -21,8 +21,9 @@ public class Zinemak extends JFrame {
 	FilmakGetxo ventGetxo;
 	FilmakMaxCenter ventMax;
 	Laburpena ventLabur;
+	
+	
 	private Filmak[] filmak = new Filmak[0];
-	Zinemak ventZinema;
 	/**
 	 * Launch the application.
 	 */
@@ -43,9 +44,11 @@ public class Zinemak extends JFrame {
 	 * Create the frame.
 	 */
 	public Zinemak() {
+		setTitle("zinemak");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
+		contentPane.setToolTipText("");
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
@@ -54,16 +57,17 @@ public class Zinemak extends JFrame {
 		JLabel lblZineAretoak = new JLabel("Zine Areto Erakusgarriak");
 		lblZineAretoak.setBounds(10, 25, 145, 14);
 		contentPane.add(lblZineAretoak);
-		
-		JButton btnElorrieta = new JButton("Elorrieta-errekamari \nZinema");
+	//elorrieta boton	
+		JButton btnElorrieta = new JButton("Elorrieta-errekamari\nZinema");
 		btnElorrieta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ventElorrieta = new FilmakElorrieta(filmak);
 				ventElorrieta.setVisible(true);
+				dispose();//cerrar ventana actual
 				
 			}
 		});
-		btnElorrieta.setBounds(10, 50, 217, 23);
+		btnElorrieta.setBounds(10, 50, 193, 23);
 		contentPane.add(btnElorrieta);
 		
 		JButton btnGetxo = new JButton("Getxo Zinema");
@@ -71,6 +75,7 @@ public class Zinemak extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				ventGetxo = new FilmakGetxo(filmak);
 				ventGetxo.setVisible(true);
+				dispose();//cerrar ventana actual
 			}
 		});
 		btnGetxo.setBounds(273, 50, 125, 23);
@@ -81,6 +86,7 @@ public class Zinemak extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				ventZubiarte = new FilmakZubiarte(filmak);
 				ventZubiarte.setVisible(true);
+				dispose();//cerrar ventana actual
 			}
 		});
 		btnZubiarte.setBounds(10, 121, 165, 23);
@@ -91,16 +97,23 @@ public class Zinemak extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				ventMax = new FilmakMaxCenter(filmak);
 				ventMax.setVisible(true);
+				dispose();//cerrar ventana actual
 			}
 		});
-		btnMaxCenter.setBounds(273, 121, 125, 23);
+		btnMaxCenter.setBounds(267, 121, 145, 23);
 		contentPane.add(btnMaxCenter);
 		
+	//boton bukatu	
 		JButton btnBukatu = new JButton("Bukatu");
 		btnBukatu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				ventZinema = new Zinemak();
-				ventZinema.setVisible(false);
+				int filmaKont=0;
+				if(filmaKont<0) {
+					ventLabur = new Laburpena(filmak);
+					ventLabur.setVisible(true);
+				}else { //cerrar app
+					System.exit(JFrame.EXIT_ON_CLOSE); //accion cerrar la app
+				}
 			}
 		});
 		btnBukatu.setBounds(10, 198, 89, 23);

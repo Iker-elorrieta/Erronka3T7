@@ -1,50 +1,26 @@
 package Objetos;
 
-import java.sql.Date;
 import java.util.Objects;
-
-import Vista.Saioak;
 
 public class Sarrera {
 	private int CodSarrera;
-	private Saioak ordutegi = new Saioak();
-	Aretoak areto =new Aretoak();
-	private int prezioa;
+	private Filmak filma = new Filmak();
 	private Bezeroa beze = new Bezeroa();
+	private Aretoak areto = new Aretoak();
+	private int prezioa;
 	
 	
-	public Sarrera() {
-		CodSarrera = getCodSarrera();
-		ordutegi = getOrdutegi();
-		areto = getAreto();
-		prezioa = getPrezioa();
-		beze = getBeze();
-	}
-	public Aretoak getAreto() {
-		return areto;
-	}
-
-	public void setAreto(Aretoak areto) {
-		this.areto = areto;
-	}
-
-	public Bezeroa getBeze() {
-		return beze;
-	}
-	public void setBeze(Bezeroa beze) {
-		this.beze = beze;
-	}
 	public int getCodSarrera() {
 		return CodSarrera;
 	}
 	public void setCodSarrera(int codSarrera) {
 		CodSarrera = codSarrera;
 	}
-	public Saioak getOrdutegi() {
-		return ordutegi;
+	public Filmak getFilma() {
+		return filma;
 	}
-	public void setOrdutegi(Saioak ordutegi) {
-		this.ordutegi = ordutegi;
+	public void setFilma(Filmak filma) {
+		this.filma = filma;
 	}
 	public int getPrezioa() {
 		return prezioa;
@@ -52,11 +28,22 @@ public class Sarrera {
 	public void setPrezioa(int prezioa) {
 		this.prezioa = prezioa;
 	}	
+	public Bezeroa getBeze() {
+		return beze;
+	}
+	public void setBeze(Bezeroa beze) {
+		this.beze = beze;
+	}
+	public Aretoak getAreto() {
+		return areto;
+	}
+	public void setAreto(Aretoak areto) {
+		this.areto = areto;
+	}
 	
 	@Override
 	public String toString() {
-		return "Sarrera [CodSarrera=" + CodSarrera + ", ordutegi=" + ordutegi
-				+ ", Aretoa=" + ", prezioa=" + prezioa + "]";
+		return "Sarrera [CodSarrera=" + CodSarrera + ", filma=" + filma + ", Aretoa=" + areto + ", prezioa=" + prezioa + "]";
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -70,6 +57,7 @@ public class Sarrera {
 		return  Objects.equals(CodSarrera, other.CodSarrera);
 				
 	}
+	
 	
 	
 }

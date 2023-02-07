@@ -1,22 +1,16 @@
 package Objetos;
 
-import java.sql.Date;
 import java.util.Objects;
-
-import Vista.Saioak;
 
 
 public class Aretoak {
 	private String AretoIzena;
 	private int CodAretoa;
-	private Date fechas;
-	private Saioak ordutegi = new Saioak();	
-
+	private Ordutegiak ordutegi = new Ordutegiak();	
 	
 	public Aretoak() {
 		AretoIzena = getAretoIzena();
 		CodAretoa = getCodAretoa();
-		fechas = getFechas();
 		ordutegi = getOrdutegi();
 	}
 	public String getAretoIzena() {
@@ -31,21 +25,15 @@ public class Aretoak {
 	public void setCodAretoa(int codAretoa) {
 		CodAretoa = codAretoa;
 	}
-	public Date getFechas() {
-		return fechas;
-	}
-	public void setFechas(Date fechas) {
-		this.fechas = fechas;
-	}
-	public Saioak getOrdutegi() {
+	public Ordutegiak getOrdutegi() {
 		return ordutegi;
 	}
-	public void setOrdutegi(Saioak ordutegiak) {
+	public void setOrdutegi(Ordutegiak ordutegiak) {
 		this.ordutegi = ordutegiak;
 	}
 	@Override
 	public String toString() {
-		return "Aretoak [AretoIzena=" + AretoIzena + ", CodAretoa=" + CodAretoa + ", fechas=" + fechas + ", ordutegi=" + ordutegi + "]";
+		return "Aretoak [AretoIzena=" + AretoIzena + ", CodAretoa=" + CodAretoa + ", ordutegi=" + ordutegi + "]";
 	}
 	@Override
 	public boolean equals(Object obj) {

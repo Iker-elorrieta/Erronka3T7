@@ -9,14 +9,6 @@ public class Filmak {
 	private int kostua;
 	private String NomFilma;
 	
-	
-	public Filmak() {
-		CodFilma = getCodFilma();
-		iraupena = getIraupena();
-		generoa = getGeneroa();
-		kostua = getKostua();
-		NomFilma = getNomFilma();
-	}
 	public int getCodFilma() {
 		return CodFilma;
 	}

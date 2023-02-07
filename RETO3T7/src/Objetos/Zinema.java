@@ -1,27 +1,11 @@
 package Objetos;
 
-import java.util.Date;
 import java.util.Objects;
 
 public class Zinema {
 	private int Codzinema;
 	private int ZbkAretoak;
-	Aretoak areto = new Aretoak();
 	
-	public Zinema() {
-		Codzinema = getCodzinema();
-		ZbkAretoak = getZbkAretoak();
-		areto = getAreto();
-	}
-	
-	public Aretoak getAreto() {
-		return areto;
-	}
-
-	public void setAreto(Aretoak areto) {
-		this.areto = areto;
-	}
-
 	public int getCodzinema() {
 		return Codzinema;
 	}
