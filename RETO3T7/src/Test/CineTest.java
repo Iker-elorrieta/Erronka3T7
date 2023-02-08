@@ -11,7 +11,7 @@ class CineTest {
 	
 	int Codzinema = 2;
 	int ZbkAretoak = 3;
-	Aretoak areto = new Aretoak();
+	Aretoak[] areto = new Aretoak[3];
 	Zinema zine = new Zinema();
 	Zinema zine2 = new Zinema();
 	@Test
@@ -31,7 +31,7 @@ class CineTest {
 	}
 	@Test
 	void toStringtest() {
-		String expected="Zinema [Codzinema=0, ZbkAretoak=0, areto=Aretoak [AretoIzena=null, CodAretoa=0]]";
+		String expected="Zinema [Codzinema=0, ZbkAretoak=0, areto=[LObjetos.Aretoak;@2611b9a3]";
 		assertEquals(expected,zine.toString());
 	}
 }

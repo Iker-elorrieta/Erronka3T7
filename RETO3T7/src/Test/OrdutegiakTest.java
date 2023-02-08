@@ -16,8 +16,8 @@ class OrdutegiakTest {
 	Date Fecha = null;
 	int orduak=10;
 	int minutuak=21;
-	Filmak filma=new Filmak();
-	Zinema zine = new Zinema();
+	Filmak filma[]=new Filmak[3];
+	Zinema zine[] = new Zinema[3];
 	Calendar cal = Calendar.getInstance();
 	Ordutegiak ordutegi = new Ordutegiak();
 	Ordutegiak ordutegi2 = new Ordutegiak();
@@ -40,6 +40,7 @@ class OrdutegiakTest {
 		assertEquals(ordutegi.getOrduak(),orduak);
 		assertEquals(ordutegi.getMinutuak(),minutuak);
 		assertEquals(ordutegi.getFecha(),Fecha);
+		assertEquals(ordutegi.getFilma(),filma);
 	}
 	@Test
 	void Equalstest() {
@@ -49,7 +50,7 @@ class OrdutegiakTest {
 	}
 	@Test
 	void toStringtest() {
-		String expected="Ordutegiak [CodOrdutegiak=0, Fecha=null, filma=Filmak [CodFilma=0, iraupena=null, generoa=null, kostua=0, NomFilma=null, FILMAK=[null, null, null, null, null, null, null, null, null, null]], zine=Zinema [Codzinema=0, ZbkAretoak=0, areto=Aretoak [AretoIzena=null, CodAretoa=0]], orduak=0, minutuak=0]";
+		String expected="Ordutegiak [CodOrdutegiak=0, Fecha=null, filma=[LObjetos.Filmak;@26a4842b, zine=[LObjetos.Zinema;@7e38a7fe, orduak=0, minutuak=0]";
 		assertEquals(expected,ordutegi.toString());
 	}
 }

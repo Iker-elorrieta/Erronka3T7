@@ -4,9 +4,9 @@ import java.util.Objects;
 
 public class Sarrera {
 	private int CodSarrera;
-	private Filmak filma = new Filmak();
+	private Filmak[] filma = new Filmak[3];
 	private Bezeroa beze = new Bezeroa();
-	private Aretoak areto = new Aretoak();
+	private Aretoak[] areto = new Aretoak[3];
 	private int prezioa;
 	
 	
@@ -16,10 +16,10 @@ public class Sarrera {
 	public void setCodSarrera(int codSarrera) {
 		CodSarrera = codSarrera;
 	}
-	public Filmak getFilma() {
+	public Filmak[] getFilma() {
 		return filma;
 	}
-	public void setFilma(Filmak filma) {
+	public void setFilma(Filmak[] filma) {
 		this.filma = filma;
 	}
 	public int getPrezioa() {
@@ -34,10 +34,10 @@ public class Sarrera {
 	public void setBeze(Bezeroa beze) {
 		this.beze = beze;
 	}
-	public Aretoak getAreto() {
+	public Aretoak[] getAreto() {
 		return areto;
 	}
-	public void setAreto(Aretoak areto) {
+	public void setAreto(Aretoak[] areto) {
 		this.areto = areto;
 	}
 	

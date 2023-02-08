@@ -14,8 +14,8 @@ import Objetos.Sarrera;
 class SarreraTest {
 	int CodSarrera=123;
 	int prezioa=4;
-	Filmak filma = new Filmak();
-	Aretoak areto = new Aretoak();
+	Filmak[] filma = new Filmak[3];
+	Aretoak[] areto = new Aretoak[3];
 	Bezeroa beze = new Bezeroa();
 	Sarrera sarrera = new Sarrera();
 	Sarrera sarrera2 = new Sarrera();
@@ -40,7 +40,7 @@ class SarreraTest {
 		}
 		@Test
 		void toStringtest() {
-			String expected="Sarrera [CodSarrera=0, filma=Filmak [CodFilma=0, iraupena=null, generoa=null, kostua=0, NomFilma=null, FILMAK=[null, null, null, null, null, null, null, null, null, null]], Aretoa=Aretoak [AretoIzena=null, CodAretoa=0], prezioa=0]";
+			String expected="Sarrera [CodSarrera=0, filma=[LObjetos.Filmak;@b968a76, Aretoa=[LObjetos.Aretoak;@2f9a01c1, prezioa=0]";
 			assertEquals(expected,sarrera.toString());
 		}
 	

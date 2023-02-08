@@ -6,11 +6,12 @@ import java.util.Objects;
 public class Aretoak {
 	private String AretoIzena;
 	private int CodAretoa;
-
+	private Ordutegiak ordutegi = new Ordutegiak();
 	
 	public Aretoak() {
 		AretoIzena = getAretoIzena();
 		CodAretoa = getCodAretoa();
+		ordutegi=getOrdutegi();
 	}
 	public String getAretoIzena() {
 		return AretoIzena;
@@ -23,6 +24,12 @@ public class Aretoak {
 	}
 	public void setCodAretoa(int codAretoa) {
 		CodAretoa = codAretoa;
+	}
+	public Ordutegiak getOrdutegi() {
+		return ordutegi;
+	}
+	public void setOrdutegi(Ordutegiak ordutegi) {
+		this.ordutegi = ordutegi;
 	}
 	@Override
 	public String toString() {
@@ -40,3 +47,4 @@ public class Aretoak {
 		return Objects.equals(CodAretoa, other.CodAretoa);
 	}
 }
+

@@ -9,8 +9,8 @@ public class Ordutegiak {
 	Date Fecha=null;
 	private int orduak;
 	private int minutuak;
-	private Zinema zine = new Zinema();
-	private Filmak filma= new Filmak();
+	private Zinema[] zine = new Zinema[4];
+	private Filmak[] filma= new Filmak[3];
 	
 	public Ordutegiak() {
 		CodOrdutegiak = getCodOrdutegiak();
@@ -20,16 +20,16 @@ public class Ordutegiak {
 		zine = getZine();
 		filma = getFilma();
 	}
-	public Filmak getFilma() {
+	public Filmak[] getFilma() {
 		return filma;
 	}
-	public void setFilma(Filmak filma) {
+	public void setFilma(Filmak[] filma) {
 		this.filma = filma;
 	}
-	public Zinema getZine() {
+	public Zinema[] getZine() {
 		return zine;
 	}
-	public void setZine(Zinema zine) {
+	public void setZine(Zinema[] zine) {
 		this.zine = zine;
 	}
 	public int getOrduak() {

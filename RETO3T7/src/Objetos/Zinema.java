@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Zinema {
 	private int Codzinema;
 	private int ZbkAretoak;
-	private Aretoak areto = new Aretoak();
+	private Aretoak[] areto = new Aretoak[3];
 	
 	
 	public Zinema() {
@@ -25,10 +25,10 @@ public class Zinema {
 	public void setZbkAretoak(int zbkAretoak) {
 		ZbkAretoak = zbkAretoak;
 	}
-	public Aretoak getAreto() {
+	public Aretoak[] getAreto() {
 		return areto;
 	}
-	public void setAreto(Aretoak areto) {
+	public void setAreto(Aretoak[] areto) {
 		this.areto = areto;
 	}	
 	@Override
