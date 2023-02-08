@@ -6,7 +6,7 @@ import java.util.Objects;
 public class Aretoak {
 	private String AretoIzena;
 	private int CodAretoa;
-	private Ordutegiak ordutegi = new Ordutegiak();
+	private Ordutegiak[] ordutegi;
 	
 	public Aretoak() {
 		AretoIzena = getAretoIzena();
@@ -25,10 +25,10 @@ public class Aretoak {
 	public void setCodAretoa(int codAretoa) {
 		CodAretoa = codAretoa;
 	}
-	public Ordutegiak getOrdutegi() {
+	public Ordutegiak[] getOrdutegi() {
 		return ordutegi;
 	}
-	public void setOrdutegi(Ordutegiak ordutegi) {
+	public void setOrdutegi(Ordutegiak[] ordutegi) {
 		this.ordutegi = ordutegi;
 	}
 	@Override

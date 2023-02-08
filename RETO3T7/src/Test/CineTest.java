@@ -31,7 +31,7 @@ class CineTest {
 	}
 	@Test
 	void toStringtest() {
-		String expected="Zinema [Codzinema=0, ZbkAretoak=0, areto=[LObjetos.Aretoak;@2611b9a3]";
+		String expected="Zinema [Codzinema=0, ZbkAretoak=0, areto=[LObjetos.Aretoak;@1252b961]";
 		assertEquals(expected,zine.toString());
 	}
 }
