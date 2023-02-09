@@ -1,8 +1,10 @@
 package Objetos;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 public class Zinema {
+	private String IzZinema;
 	private int Codzinema;
 	private int ZbkAretoak;
 	private Aretoak[] areto;
@@ -31,9 +33,16 @@ public class Zinema {
 	public void setAreto(Aretoak[] areto) {
 		this.areto = areto;
 	}	
+	public String getIzZinema() {
+		return IzZinema;
+	}
+	public void setIzZinema(String izZinema) {
+		IzZinema = izZinema;
+	}
 	@Override
 	public String toString() {
-		return "Zinema [Codzinema=" + Codzinema + ", ZbkAretoak=" + ZbkAretoak + ", areto=" + areto + "]";
+		return "Zinema [IzZinema=" + IzZinema + ", Codzinema=" + Codzinema + ", ZbkAretoak=" + ZbkAretoak + ", areto="
+				+ Arrays.toString(areto) + "]";
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -46,6 +55,7 @@ public class Zinema {
 		Zinema other = (Zinema) obj;
 		return Objects.equals(Codzinema, other.Codzinema);
 	}
+	
 	
 	
 }

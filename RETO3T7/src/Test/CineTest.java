@@ -8,7 +8,7 @@ import Objetos.Aretoak;
 import Objetos.Zinema;
 
 class CineTest {
-	
+	String IzZinema = "Elorrieta-errekamari zinema"; 
 	int Codzinema = 2;
 	int ZbkAretoak = 3;
 	Aretoak[] areto;
@@ -16,9 +16,11 @@ class CineTest {
 	Zinema zine2 = new Zinema();
 	@Test
 	void GetySettest() {
+		zine.setIzZinema(IzZinema);;
 		zine.setCodzinema(Codzinema);
 		zine.setZbkAretoak(ZbkAretoak);
 		zine.setAreto(areto);
+		assertEquals(zine.getIzZinema(),IzZinema);
 		assertEquals(zine.getCodzinema(),Codzinema);
 		assertEquals(zine.getZbkAretoak(),ZbkAretoak);
 		assertEquals(zine.getAreto(),areto);
@@ -31,7 +33,7 @@ class CineTest {
 	}
 	@Test
 	void toStringtest() {
-		String expected="Zinema [Codzinema=0, ZbkAretoak=0, areto=null]";
+		String expected="Zinema [IzZinema=null, Codzinema=0, ZbkAretoak=0, areto=null]";
 		assertEquals(expected,zine.toString());
 	}
 }
