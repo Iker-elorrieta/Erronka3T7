@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Zinema {
 	private int Codzinema;
 	private int ZbkAretoak;
-	private Aretoak[] areto = new Aretoak[3];
+	private Aretoak[] areto;
 	
 	
 	public Zinema() {

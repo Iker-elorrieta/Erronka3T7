@@ -30,13 +30,11 @@ class OrdutegiakTest {
 		Fecha = cal.getTime();
 		ordutegi.setCodOrdutegiak(CodOrdutergiak);
 		ordutegi.setFilma(filma);
-		ordutegi.setSarrera(sarrera);
 		ordutegi.setOrduak(orduak);
 		ordutegi.setMinutuak(minutuak);
 		ordutegi.setFecha(Fecha);
 		assertEquals(ordutegi.getCodOrdutegiak(),CodOrdutergiak);
 		assertEquals(ordutegi.getFilma(),filma);
-		assertEquals(ordutegi.getSarrera(),sarrera);
 		assertEquals(ordutegi.getFecha(),Fecha);
 		assertEquals(ordutegi.getFilma(),filma);
 		assertEquals(ordutegi.getOrduak(),orduak);
@@ -51,7 +49,7 @@ class OrdutegiakTest {
 	}
 	@Test
 	void toStringtest() {
-		String expected="Ordutegiak [CodOrdutegiak=0, Fecha=null, orduak=null, minutuak=null, sarrera=null, filma=null]";
+		String expected="Ordutegiak [CodOrdutegiak=0, Fecha=null, orduak=null, minutuak=null, filma=null]";
 		assertEquals(expected,ordutegi.toString());
 	}
 }
