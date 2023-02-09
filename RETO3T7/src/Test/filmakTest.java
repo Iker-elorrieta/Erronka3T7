@@ -12,8 +12,8 @@ class filmakTest {
 	String generoa = "terror";
 	int kostua = 5;
 	String NomFilma = "Psicosis";
-	Filmak filma = new Filmak();
-	Filmak filma2 = new Filmak(); 
+	Filmak filma = new Filmak(CodFilma, NomFilma, NomFilma, CodFilma, NomFilma);
+	Filmak filma2 = new Filmak(CodFilma, NomFilma, NomFilma, CodFilma, NomFilma); 
 	@Test
 	void GetySettest() {
 		filma.setCodFilma(CodFilma);
@@ -35,7 +35,7 @@ class filmakTest {
 	}
 	@Test
 	void toStringtest() {
-		String expected="Filmak [CodFilma=0, iraupena=null, generoa=null, kostua=0, NomFilma=null]";
+		String expected="Filmak [CodFilma=4, iraupena=Psicosis, generoa=Psicosis, kostua=4, NomFilma=Psicosis]";
 		assertEquals(expected,filma.toString());
 	}
 	

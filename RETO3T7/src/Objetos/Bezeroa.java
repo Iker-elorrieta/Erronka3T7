@@ -11,13 +11,15 @@ public class Bezeroa {
 	private String pasahitza;
 	
 	
-	public Bezeroa() {
-		DNI = getDNI();
-		izena = getIzena();
-		Abizena1 = getAbizena1();
-		Abizena2 = getAbizena2();
-		sexua = getSexua();
-		pasahitza = getPasahitza();
+
+	public Bezeroa(String dNI, String izena, String abizena1, String abizena2, String sexua, String pasahitza) {
+		super();
+		DNI = dNI;
+		this.izena = izena;
+		Abizena1 = abizena1;
+		Abizena2 = abizena2;
+		this.sexua = sexua;
+		this.pasahitza = pasahitza;
 	}
 
 	public String getAbizena1() {

@@ -8,7 +8,7 @@ public class Aretoak {
 	private int CodAretoa;
 	private Ordutegiak[] ordutegi;
 	
-	public Aretoak() {
+	public Aretoak(String aretoIzena, int codAretoa, Ordutegiak[] ordutegi) {
 		AretoIzena = getAretoIzena();
 		CodAretoa = getCodAretoa();
 		ordutegi=getOrdutegi();

@@ -19,8 +19,8 @@ class OrdutegiakTest {
 	Filmak filma;
 	Sarrera []sarrera;
 	Calendar cal = Calendar.getInstance();
-	Ordutegiak ordutegi = new Ordutegiak();
-	Ordutegiak ordutegi2 = new Ordutegiak();
+	Ordutegiak ordutegi = new Ordutegiak(CodOrdutergiak, Fecha, minutuak, minutuak, filma);
+	Ordutegiak ordutegi2 = new Ordutegiak(CodOrdutergiak, Fecha, minutuak, minutuak, filma);
 
 	@Test
 	void GetySettest() {
@@ -49,7 +49,7 @@ class OrdutegiakTest {
 	}
 	@Test
 	void toStringtest() {
-		String expected="Ordutegiak [CodOrdutegiak=0, Fecha=null, orduak=null, minutuak=null, filma=null]";
+		String expected="Ordutegiak [CodOrdutegiak=2, Fecha=null, orduak=21, minutuak=21, filma=null]";
 		assertEquals(expected,ordutegi.toString());
 	}
 }

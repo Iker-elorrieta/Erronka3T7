@@ -10,7 +10,8 @@ public class Zinema {
 	private Aretoak[] areto;
 	
 	
-	public Zinema() {
+	public Zinema(int codzinema, int zbkAretoak, Aretoak[] areto) {
+		IzZinema = getIzZinema();
 		Codzinema = getCodzinema();
 		ZbkAretoak = getZbkAretoak();
 		areto = getAreto();

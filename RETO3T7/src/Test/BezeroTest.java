@@ -13,8 +13,8 @@ class BezeroTest {
 	String Abizenak2 = "Lombera";
 	String sexua = "g";
 	String pasahitza = "1234";
-	Bezeroa bezero = new Bezeroa();
-	Bezeroa bezero2 = new Bezeroa();
+	Bezeroa bezero = new Bezeroa(Abizenak1, Abizenak1, Abizenak1, Abizenak1, Abizenak1, Abizenak1);
+	Bezeroa bezero2 = new Bezeroa(Abizenak1, Abizenak1, Abizenak1, Abizenak1, Abizenak1, Abizenak1);
 	@Test
 	void GetyTesttest() {
 			bezero.setDNI(DNI);
@@ -38,7 +38,7 @@ class BezeroTest {
 	}
 	@Test
 	void toStringtest() {
-		String expected="Bezeroa [DNI=null, izena=null, Abizena1=null, Abizena2=null, sexua=null, pasahitza=null]";
+		String expected="Bezeroa [DNI=Fernandez, izena=Fernandez, Abizena1=Fernandez, Abizena2=Fernandez, sexua=Fernandez, pasahitza=Fernandez]";
 		assertEquals(expected,bezero.toString());
 	}
 	

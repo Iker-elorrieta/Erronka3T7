@@ -11,12 +11,12 @@ public class Ordutegiak {
 	private String minutuak;
 	private Filmak filma;
 	
-	public Ordutegiak() {
-		CodOrdutegiak = getCodOrdutegiak();
-		Fecha = getFecha();
-		orduak = getOrduak();
-		minutuak = getMinutuak();
-		filma = getFilma();
+	public Ordutegiak(int codOrdutegiak, Date fecha, String orduak, String minutuak, Filmak filma) {
+		CodOrdutegiak = codOrdutegiak;
+		Fecha = fecha;
+		this.orduak = orduak;
+		this.minutuak = minutuak;
+		this.filma = filma;
 	}
 	public Filmak getFilma() {
 		return filma;

@@ -6,8 +6,15 @@ public class Sarrera {
 	private int CodSarrera;
 	private Bezeroa beze;
 	private int prezioa;
-	Ordutegiak[] ordutegi;
+	private Ordutegiak[] ordutegi;
 	
+	
+	public Sarrera(int codSarrera, Bezeroa beze, int prezioa, Ordutegiak[] ordutegi) {
+		CodSarrera = codSarrera;
+		this.beze = beze;
+		this.prezioa = prezioa;
+		this.setOrdutegi(ordutegi);
+	}
 	public int getCodSarrera() {
 		return CodSarrera;
 	}
@@ -26,6 +33,12 @@ public class Sarrera {
 	public void setBeze(Bezeroa beze) {
 		this.beze = beze;
 	}
+	public Ordutegiak[] getOrdutegi() {
+		return ordutegi;
+	}
+	public void setOrdutegi(Ordutegiak[] ordutegi) {
+		this.ordutegi = ordutegi;
+	}
 	
 	@Override
 	public String toString() {
@@ -43,6 +56,7 @@ public class Sarrera {
 		return  Objects.equals(CodSarrera, other.CodSarrera);
 				
 	}
+	
 	
 	
 	
