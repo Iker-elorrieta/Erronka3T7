@@ -4,37 +4,21 @@ import java.util.Date;
 import java.util.Objects;
 
 
-public class Ordutegiak {
+public class Ordutegia {
 	private int CodOrdutegiak;
 	Date Fecha=null;
-	private String orduak;
-	private String minutuak;
-	private Filmak filma;
+	private Filma filma;
 	
-	public Ordutegiak(int codOrdutegiak, Date fecha, String orduak, String minutuak, Filmak filma) {
+	public Ordutegia(int codOrdutegiak, Date fecha, Filma filma) {
 		CodOrdutegiak = codOrdutegiak;
 		Fecha = fecha;
-		this.orduak = orduak;
-		this.minutuak = minutuak;
 		this.filma = filma;
 	}
-	public Filmak getFilma() {
+	public Filma getFilma() {
 		return filma;
 	}
-	public void setFilma(Filmak filma) {
+	public void setFilma(Filma filma) {
 		this.filma = filma;
-	}
-	public String getOrduak() {
-		return orduak;
-	}
-	public void setOrduak(String orduak) {
-		this.orduak = orduak;
-	}
-	public String getMinutuak() {
-		return minutuak;
-	}
-	public void setMinutuak(String minutuak) {
-		this.minutuak = minutuak;
 	}
 	public int getCodOrdutegiak() {
 		return CodOrdutegiak;
@@ -52,8 +36,7 @@ public class Ordutegiak {
 	
 	@Override
 	public String toString() {
-		return "Ordutegiak [CodOrdutegiak=" + CodOrdutegiak + ", Fecha=" + Fecha + ", orduak=" + orduak + ", minutuak="
-				+ minutuak + ", filma=" + filma + "]";
+		return "Ordutegia [CodOrdutegiak=" + CodOrdutegiak + ", Fecha=" + Fecha + ", filma=" + filma + "]";
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -63,7 +46,7 @@ public class Ordutegiak {
 			return false;
 		/*if (getClass() != obj.getClass())
 			return false;*/
-		Ordutegiak other = (Ordutegiak) obj;
+		Ordutegia other = (Ordutegia) obj;
 		return Objects.equals(CodOrdutegiak , other.CodOrdutegiak) ;
 	}
 

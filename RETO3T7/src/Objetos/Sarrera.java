@@ -1,15 +1,16 @@
 package Objetos;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 public class Sarrera {
 	private int CodSarrera;
 	private Bezeroa beze;
 	private int prezioa;
-	private Ordutegiak[] ordutegi;
+	private Ordutegia[] ordutegi;
 	
 	
-	public Sarrera(int codSarrera, Bezeroa beze, int prezioa, Ordutegiak[] ordutegi) {
+	public Sarrera(int codSarrera, Bezeroa beze, int prezioa, Ordutegia[] ordutegi) {
 		CodSarrera = codSarrera;
 		this.beze = beze;
 		this.prezioa = prezioa;
@@ -33,16 +34,17 @@ public class Sarrera {
 	public void setBeze(Bezeroa beze) {
 		this.beze = beze;
 	}
-	public Ordutegiak[] getOrdutegi() {
+	public Ordutegia[] getOrdutegi() {
 		return ordutegi;
 	}
-	public void setOrdutegi(Ordutegiak[] ordutegi) {
+	public void setOrdutegi(Ordutegia[] ordutegi) {
 		this.ordutegi = ordutegi;
 	}
 	
 	@Override
 	public String toString() {
-		return "Sarrera [CodSarrera=" + CodSarrera +/* ", filma=" + filma + ", Aretoa=" + areto +*/ ", prezioa=" + prezioa + "]";
+		return "Sarrera [CodSarrera=" + CodSarrera + ", beze=" + beze + ", prezioa=" + prezioa + ", ordutegi="
+				+ Arrays.toString(ordutegi) + "]";
 	}
 	@Override
 	public boolean equals(Object obj) {

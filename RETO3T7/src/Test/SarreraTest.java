@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import Objetos.Bezeroa;
-import Objetos.Ordutegiak;
+import Objetos.Ordutegia;
 import Objetos.Sarrera;
 
 
@@ -14,7 +14,7 @@ class SarreraTest {
 	int CodSarrera=123;
 	int prezioa=4;
 	Bezeroa beze;
-	Ordutegiak[] ordutegi;
+	Ordutegia[] ordutegi;
 	Sarrera sarrera = new Sarrera(CodSarrera, beze, CodSarrera, null);
 	Sarrera sarrera2 = new Sarrera(CodSarrera, beze, CodSarrera, null);
 	@Test
@@ -36,7 +36,7 @@ class SarreraTest {
 		}
 		@Test
 		void toStringtest() {
-			String expected="Sarrera [CodSarrera=123, prezioa=123]";
+			String expected="Sarrera [CodSarrera=123, beze=null, prezioa=123, ordutegi=null]";
 			assertEquals(expected,sarrera.toString());
 		}
 	

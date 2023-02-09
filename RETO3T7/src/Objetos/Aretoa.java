@@ -1,14 +1,15 @@
 package Objetos;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 
-public class Aretoak {
+public class Aretoa {
 	private String AretoIzena;
 	private int CodAretoa;
-	private Ordutegiak[] ordutegi;
+	private Ordutegia[] ordutegi;
 	
-	public Aretoak(String aretoIzena, int codAretoa, Ordutegiak[] ordutegi) {
+	public Aretoa(String aretoIzena, int codAretoa, Ordutegia[] ordutegi) {
 		AretoIzena = getAretoIzena();
 		CodAretoa = getCodAretoa();
 		ordutegi=getOrdutegi();
@@ -25,15 +26,16 @@ public class Aretoak {
 	public void setCodAretoa(int codAretoa) {
 		CodAretoa = codAretoa;
 	}
-	public Ordutegiak[] getOrdutegi() {
+	public Ordutegia[] getOrdutegi() {
 		return ordutegi;
 	}
-	public void setOrdutegi(Ordutegiak[] ordutegi) {
+	public void setOrdutegi(Ordutegia[] ordutegi) {
 		this.ordutegi = ordutegi;
 	}
 	@Override
 	public String toString() {
-		return "Aretoak [AretoIzena=" + AretoIzena + ", CodAretoa=" + CodAretoa + "]";
+		return "Aretoa [AretoIzena=" + AretoIzena + ", CodAretoa=" + CodAretoa + ", ordutegi="
+				+ Arrays.toString(ordutegi) + "]";
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -43,7 +45,7 @@ public class Aretoak {
 			return false;
 		/*if (getClass() != obj.getClass())
 			return false;*/
-		Aretoak other = (Aretoak) obj;
+		Aretoa other = (Aretoa) obj;
 		return Objects.equals(CodAretoa, other.CodAretoa);
 	}
 }

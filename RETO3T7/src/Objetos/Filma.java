@@ -2,7 +2,7 @@ package Objetos;
 
 import java.util.Objects;
 
-public class Filmak {
+public class Filma {
 	private int CodFilma;
 	private String iraupena;
 	private String generoa;
@@ -10,7 +10,7 @@ public class Filmak {
 	private String NomFilma;
 	
 	
-	public Filmak(int codFilma, String iraupena, String generoa, int kostua, String nomFilma) {
+	public Filma(int codFilma, String iraupena, String generoa, int kostua, String nomFilma) {
 		CodFilma = codFilma;
 		this.iraupena = iraupena;
 		this.generoa = generoa;
@@ -51,7 +51,7 @@ public class Filmak {
 	
 	@Override
 	public String toString() {
-		return "Filmak [CodFilma=" + CodFilma + ", iraupena=" + iraupena + ", generoa=" + generoa + ", kostua=" + kostua
+		return "Filma [CodFilma=" + CodFilma + ", iraupena=" + iraupena + ", generoa=" + generoa + ", kostua=" + kostua
 				+ ", NomFilma=" + NomFilma + "]";
 	}
 	@Override
@@ -62,7 +62,7 @@ public class Filmak {
 			return false;
 		/*if (getClass() != obj.getClass())
 			return false;*/
-		Filmak other = (Filmak) obj;
+		Filma other = (Filma) obj;
 		return Objects.equals(CodFilma, other.CodFilma);
 	}
 	

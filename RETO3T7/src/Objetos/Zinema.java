@@ -7,10 +7,10 @@ public class Zinema {
 	private String IzZinema;
 	private int Codzinema;
 	private int ZbkAretoak;
-	private Aretoak[] areto;
+	private Aretoa[] areto;
 	
 	
-	public Zinema(int codzinema, int zbkAretoak, Aretoak[] areto) {
+	public Zinema(int codzinema, int zbkAretoak, Aretoa[] areto) {
 		IzZinema = getIzZinema();
 		Codzinema = getCodzinema();
 		ZbkAretoak = getZbkAretoak();
@@ -28,10 +28,10 @@ public class Zinema {
 	public void setZbkAretoak(int zbkAretoak) {
 		ZbkAretoak = zbkAretoak;
 	}
-	public Aretoak[] getAreto() {
+	public Aretoa[] getAreto() {
 		return areto;
 	}
-	public void setAreto(Aretoak[] areto) {
+	public void setAreto(Aretoa[] areto) {
 		this.areto = areto;
 	}	
 	public String getIzZinema() {

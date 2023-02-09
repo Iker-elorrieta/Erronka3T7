@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import Objetos.Filmak;
+import Objetos.Filma;
 
 class filmakTest {
 	int CodFilma = 4;
@@ -12,8 +12,8 @@ class filmakTest {
 	String generoa = "terror";
 	int kostua = 5;
 	String NomFilma = "Psicosis";
-	Filmak filma = new Filmak(CodFilma, NomFilma, NomFilma, CodFilma, NomFilma);
-	Filmak filma2 = new Filmak(CodFilma, NomFilma, NomFilma, CodFilma, NomFilma); 
+	Filma filma = new Filma(CodFilma, NomFilma, NomFilma, CodFilma, NomFilma);
+	Filma filma2 = new Filma(CodFilma, NomFilma, NomFilma, CodFilma, NomFilma); 
 	@Test
 	void GetySettest() {
 		filma.setCodFilma(CodFilma);
@@ -35,7 +35,7 @@ class filmakTest {
 	}
 	@Test
 	void toStringtest() {
-		String expected="Filmak [CodFilma=4, iraupena=Psicosis, generoa=Psicosis, kostua=4, NomFilma=Psicosis]";
+		String expected="Filma [CodFilma=4, iraupena=Psicosis, generoa=Psicosis, kostua=4, NomFilma=Psicosis]";
 		assertEquals(expected,filma.toString());
 	}
 	

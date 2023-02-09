@@ -4,14 +4,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import Objetos.Aretoak;
+import Objetos.Aretoa;
 import Objetos.Zinema;
 
 class CineTest {
 	String IzZinema = "Elorrieta-errekamari zinema"; 
 	int Codzinema = 2;
 	int ZbkAretoak = 3;
-	Aretoak[] areto;
+	Aretoa[] areto;
 	Zinema zine = new Zinema(Codzinema, Codzinema, areto);
 	Zinema zine2 = new Zinema(Codzinema, Codzinema, areto);
 	@Test

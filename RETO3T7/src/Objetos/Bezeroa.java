@@ -63,8 +63,6 @@ public class Bezeroa {
 		this.pasahitza = pasahitza;
 	}
 	
-	
-	
 	@Override
 	public String toString() {
 		return "Bezeroa [DNI=" + DNI + ", izena=" + izena + ", Abizena1=" + Abizena1 + ", Abizena2=" + Abizena2

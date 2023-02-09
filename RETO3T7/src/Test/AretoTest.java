@@ -4,16 +4,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import Objetos.Aretoak;
-import Objetos.Ordutegiak;
+import Objetos.Aretoa;
+import Objetos.Ordutegia;
 
 class AretoaTest {
 	
 	String Aretoizena = "areto";
 	int CodAretoa = 2; 
-	Ordutegiak[] ordutegi;
-	Aretoak areto = new Aretoak(Aretoizena, CodAretoa, ordutegi);
-	Aretoak areto2 = new Aretoak(Aretoizena, CodAretoa, ordutegi);
+	Ordutegia[] ordutegi;
+	Aretoa areto = new Aretoa(Aretoizena, CodAretoa, ordutegi);
+	Aretoa areto2 = new Aretoa(Aretoizena, CodAretoa, ordutegi);
 	@Test
 	void GetySettest() {
 		areto.setAretoIzena(Aretoizena);
@@ -32,7 +32,7 @@ class AretoaTest {
 	}
 	@Test
 	void toStringtest() {
-		String expected="Aretoak [AretoIzena=null, CodAretoa=0]";
+		String expected="Aretoa [AretoIzena=null, CodAretoa=0, ordutegi=null]";
 		assertEquals(expected,areto.toString());
 	}
 }
