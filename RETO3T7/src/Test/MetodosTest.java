@@ -1,5 +1,22 @@
 package Test;
 
-public class MetodosTest {
 
+import org.junit.jupiter.api.Test;
+
+
+class MetodosTest {
+	
+	@Test
+	void Metodostest() {
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+
+	
 }
