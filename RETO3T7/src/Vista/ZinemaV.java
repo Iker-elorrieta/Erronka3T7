@@ -12,15 +12,17 @@ import javax.swing.JLabel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JComboBox;
+import java.awt.event.ItemListener;
+import java.awt.event.ItemEvent;
 
-public class Zinema extends JFrame {
+public class ZinemakV extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	FilmaElorrieta ventElorrieta;
-	FilmaZubiarte ventZubiarte;
-	FilmaGetxo ventGetxo;
-	Laburpena ventLabur;
+
+	LaburpenaV ventLabur;
+	FilmakV ventfilmak;
 	
 	
 	private Filma[] filmak = new Filma[0];
@@ -31,7 +33,7 @@ public class Zinema extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Zinema frame = new Zinema();
+					ZinemakV frame = new ZinemakV();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -43,7 +45,7 @@ public class Zinema extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Zinema() {
+	public ZinemakV() {
 		setTitle("zinemak");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -57,29 +59,12 @@ public class Zinema extends JFrame {
 		JLabel lblZineAretoak = new JLabel("Zine Areto Erakusgarriak");
 		lblZineAretoak.setBounds(10, 25, 145, 14);
 		contentPane.add(lblZineAretoak);
-	//elorrieta boton	
-		JButton btnElorrieta = new JButton("Elorrieta-errekamari\r\n Zinema");
-		btnElorrieta.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				ventElorrieta = new FilmaElorrieta(filmak);
-				ventElorrieta.setVisible(true);
-				dispose();//cerrar ventana actual
-				
-			}
-		});
-		btnElorrieta.setBounds(110, 139, 218, 23);
-		contentPane.add(btnElorrieta);
 		
-		JButton btnGetxo = new JButton("Getxo Zinema");
-		btnGetxo.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				ventGetxo = new FilmaGetxo(filmak);
-				ventGetxo.setVisible(true);
-				dispose();//cerrar ventana actual
-			}
-		});
-		btnGetxo.setBounds(273, 50, 125, 23);
-		contentPane.add(btnGetxo);
+		
+		
+		
+		
+		
 		
 	//boton bukatu	
 		JButton btnBukatu = new JButton("Bukatu");
@@ -87,7 +72,7 @@ public class Zinema extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				int filmaKont=0;
 				if(filmaKont<0) {
-					ventLabur = new Laburpena(filmak);
+					ventLabur = new LaburpenaV(filmak);
 					ventLabur.setVisible(true);
 				}else { //cerrar app
 					System.exit(JFrame.EXIT_ON_CLOSE); //accion cerrar la app
@@ -97,15 +82,52 @@ public class Zinema extends JFrame {
 		btnBukatu.setBounds(10, 198, 89, 23);
 		contentPane.add(btnBukatu);
 		
-		JButton btnZubiarte = new JButton("Zubiarte Zinema");
-		btnZubiarte.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				ventZubiarte = new FilmaZubiarte(filmak);
-				ventZubiarte.setVisible(true);
-				dispose();//cerrar ventana actual
+		
+		//----COMBOBOX-------
+
+		JComboBox<String> cines = new JComboBox<String>();
+
+		cines.setBounds(80, 100, 249, 22);
+		contentPane.add(cines);
+
+
+
+		String cantcines = "Elorrieta,Getxo,Max center"; //pillamos pelis de la base de datos
+
+
+		String[] cantcines2 = cantcines.split(","); //separamos por "," para saber cuantos hay y valor en posicion
+
+
+		int cantcinescant = cantcines2.length; //cantidad de cines segun split 1 , 2 , 3..
+		//String[] itemscant = new String[cantcinescant]; //array de length segun cantidad de cines
+
+
+		for(int i = 0; i< cantcinescant ; i++) {
+
+		cines.addItem(cantcines2[i]);
+
+		};
+		
+		
+	//EVENTO DE CAMBIO SE SELECCION---------------------	
+		cines.addItemListener(new ItemListener() {
+			public void itemStateChanged(ItemEvent e) {
+				
+				String cinelegido = (String) cines.getSelectedItem(); //guardamos lo que se selecciona(no se porqeu guarda 2)
+				
+				if(cinelegido !="") { //evento al cambio de seleccion
+					
+					ventfilmak = new FilmakV();
+					ventfilmak.setVisible(true);
+					dispose();
+
+				}
+				
 			}
 		});
-		btnZubiarte.setBounds(20, 50, 135, 23);
-		contentPane.add(btnZubiarte);
+
+	//-------------------------------------------------
+		
+		//------------------------------------------------
 	}
 }

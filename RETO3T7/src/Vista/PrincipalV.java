@@ -1,5 +1,4 @@
 package Vista;
-
 import java.awt.Color;
 import java.awt.EventQueue;
 
@@ -7,20 +6,19 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import Metodoak.Metodoak;
+
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import javax.swing.JTextField;
 
-public class Principal extends JFrame {
+public class PrincipalV extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel Principal;
 	private JTextField ongietorria;
-	Metodoak metodoak = new Metodoak(); 
-	Zinema vent;
+	ZinemakV vent;
 
 	/**
 	 * Launch the application.
@@ -29,7 +27,7 @@ public class Principal extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Principal frame = new Principal();
+					PrincipalV frame = new PrincipalV();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -41,7 +39,7 @@ public class Principal extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Principal() {
+	public PrincipalV() {
 		setTitle("printzipala");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -49,19 +47,13 @@ public class Principal extends JFrame {
 		Principal.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) { //si clicas mas de una vez te abrira tantas ventanas como clikes
 				try {
-					Thread.sleep(3000);// hiru segundu itxaroteko beste pantailara joan aurretik
+					Thread.sleep(2000);// hiru segundu itxaroteko beste pantailara joan aurretik
 				} catch (Exception e1) {
 					System.out.println(e1);
 				}
-				vent = new Zinema(); //enlace con la siguiente ventana(creacion)
+				vent = new ZinemakV(); //enlace con la siguiente ventana(creacion)
 				vent.setVisible(true); //despues de 3 segs vemos la ventana
 				dispose(); //cerrar ventana actual
-				/*metodoak.ArrayZinema(null);
-				metodoak.ArrayAretoak(null);
-				metodoak.ArrayFilmak(null);
-				metodoak.ArrayOrdutegiak(null);
-				metodoak.ArrayBezeroa(null);
-				metodoak.ArraySarrera(null);*/
 			}
 		});
 		Principal.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -76,7 +68,6 @@ public class Principal extends JFrame {
 		ongietorria.setBounds(62, 109, 310, 20);
 		Principal.add(ongietorria);
 		ongietorria.setColumns(10);
-		
 		
 	}
 	
