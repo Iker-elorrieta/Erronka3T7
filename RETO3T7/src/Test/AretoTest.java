@@ -14,6 +14,7 @@ class AretoaTest {
 	Ordutegia[] ordutegi;
 	Aretoa areto = new Aretoa(Aretoizena, CodAretoa, ordutegi);
 	Aretoa areto2 = new Aretoa(Aretoizena, CodAretoa, ordutegi);
+	Aretoa areto3 = new Aretoa();
 	@Test
 	void GetySettest() {
 		areto.setAretoIzena(Aretoizena);

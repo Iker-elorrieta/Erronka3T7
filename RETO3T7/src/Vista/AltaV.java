@@ -15,11 +15,15 @@ import java.awt.event.ActionEvent;
 
 public class AltaV extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField textField;
 	private JPasswordField txtpasahitza;
 	LoginV ventLogin;
-	ZinemakV ventZinemak;
+	ZinemaV ventZinemak;
 
 	/**
 	 * Launch the application.
@@ -65,7 +69,7 @@ public class AltaV extends JFrame {
 		JButton btnbueltatuasiera = new JButton("Bueltatu asierara");
 		btnbueltatuasiera.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) { //SE TIENEN QUE BORRAR TODOS LOS DATOS
-				ventZinemak = new ZinemakV(); //enlace con la siguiente ventana(creacion)
+				ventZinemak = new ZinemaV(); //enlace con la siguiente ventana(creacion)
 				ventZinemak.setVisible(true);
 				dispose(); //cerrar ventana actual (si cierras lade ahora se deja la antetior(volver))
 				

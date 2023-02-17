@@ -18,7 +18,7 @@ public class PrincipalV extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel Principal;
 	private JTextField ongietorria;
-	ZinemakV vent;
+	ZinemaV vent;
 
 	/**
 	 * Launch the application.
@@ -51,7 +51,7 @@ public class PrincipalV extends JFrame {
 				} catch (Exception e1) {
 					System.out.println(e1);
 				}
-				vent = new ZinemakV(); //enlace con la siguiente ventana(creacion)
+				vent = new ZinemaV(); //enlace con la siguiente ventana(creacion)
 				vent.setVisible(true); //despues de 3 segs vemos la ventana
 				dispose(); //cerrar ventana actual
 			}
@@ -68,7 +68,6 @@ public class PrincipalV extends JFrame {
 		ongietorria.setBounds(62, 109, 310, 20);
 		Principal.add(ongietorria);
 		ongietorria.setColumns(10);
-		
 	}
 	
 }

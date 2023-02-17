@@ -14,6 +14,8 @@ public class Aretoa {
 		CodAretoa = getCodAretoa();
 		ordutegi=getOrdutegi();
 	}
+	public Aretoa() {
+	}
 	public String getAretoIzena() {
 		return AretoIzena;
 	}

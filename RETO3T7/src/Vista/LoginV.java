@@ -15,11 +15,16 @@ import java.awt.event.ActionEvent;
 
 public class LoginV extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField textField;
 	private JPasswordField txtpasahitza;
 	AltaV ventAlta;
-	ZinemakV ventZinemak;
+	ZinemaV ventZinemak;
+	ErosketafinalaV venterosketafinal;
 
 	/**
 	 * Launch the application.
@@ -77,7 +82,7 @@ public class LoginV extends JFrame {
 		JButton btnbueltatuasiera = new JButton("Bueltatu asierara");
 		btnbueltatuasiera.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {//SE TIENEN QUE BORRAR TODOS LOS DATOS
-				ventZinemak = new ZinemakV(); //enlace con la siguiente ventana(creacion)
+				ventZinemak = new ZinemaV(); //enlace con la siguiente ventana(creacion)
 				ventZinemak.setVisible(true);
 				dispose(); //cerrar ventana actual (si cierras lade ahora se deja la antetior(volver))
 			}
@@ -87,10 +92,18 @@ public class LoginV extends JFrame {
 		
 		JLabel lblbalioakmsg = new JLabel("balio guztiak berraraziko dira !");
 		lblbalioakmsg.setBackground(new Color(255, 255, 255));
-		lblbalioakmsg.setBounds(37, 247, 170, 14);
+		lblbalioakmsg.setBounds(27, 247, 183, 14);
 		contentPane.add(lblbalioakmsg);
 		
 		JButton btnerosi = new JButton("Erosi");
+		btnerosi.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				venterosketafinal = new ErosketafinalaV();
+				venterosketafinal.setVisible(true);
+				dispose();
+				
+			}
+		});
 		btnerosi.setBounds(335, 214, 89, 23);
 		contentPane.add(btnerosi);
 		

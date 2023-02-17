@@ -6,18 +6,19 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class ErosketafinalaV extends JFrame {
+public class TiketV extends JFrame {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	ZinemaV ventZinemak;
+	ZinemaV ventzinema;
 
 	/**
 	 * Launch the application.
@@ -26,7 +27,7 @@ public class ErosketafinalaV extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					ErosketafinalaV frame = new ErosketafinalaV();
+					TiketV frame = new TiketV();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -38,7 +39,7 @@ public class ErosketafinalaV extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public ErosketafinalaV() {
+	public TiketV() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -47,29 +48,31 @@ public class ErosketafinalaV extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Sakatu \"bai\" zure erosketaren tiketa lortzeko");
-		lblNewLabel.setBounds(104, 69, 299, 14);
-		contentPane.add(lblNewLabel);
+		JLabel lblinfo = new JLabel("Sakatu \"bai\" zure erosketaren tiketa lortzeko");
+		lblinfo.setBounds(88, 67, 289, 14);
+		contentPane.add(lblinfo);
 		
 		JButton btnbai = new JButton("Bai");
 		btnbai.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//popup joptionpanelshowmessagedialog
+				JOptionPane.showMessageDialog(null, "Tiket sarrerak era egokian erosi dira!"); //POP UP
 			}
 		});
-		btnbai.setBounds(173, 138, 89, 23);
+		btnbai.setBounds(159, 117, 89, 23);
 		contentPane.add(btnbai);
 		
-		JButton btnbultatuasierara = new JButton("Bueltatu asierara");
-		btnbultatuasierara.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) { 
-				ventZinemak = new ZinemaV(); //enlace con la siguiente ventana(creacion)
-				ventZinemak.setVisible(true);
-				dispose(); //cerrar ventana actual (si cierras lade ahora se deja la antetior(volver))
+		
+		JButton btnbueltatuasiera = new JButton("Bueltatu asierara");
+		btnbueltatuasiera.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				ventzinema = new ZinemaV();
+				ventzinema.setVisible(true);
+				dispose();
+				
 			}
 		});
-		btnbultatuasierara.setBounds(10, 227, 149, 23);
-		contentPane.add(btnbultatuasierara);
+		btnbueltatuasiera.setBounds(10, 227, 139, 23);
+		contentPane.add(btnbueltatuasiera);
 	}
-
 }

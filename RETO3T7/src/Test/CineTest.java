@@ -12,18 +12,16 @@ class CineTest {
 	int Codzinema = 2;
 	int ZbkAretoak = 3;
 	Aretoa[] areto;
-	Zinema zine = new Zinema(Codzinema, Codzinema, areto);
-	Zinema zine2 = new Zinema(Codzinema, Codzinema, areto);
+	Zinema zine = new Zinema(IzZinema, Codzinema, areto);
+	Zinema zine2 = new Zinema(IzZinema, Codzinema, areto);
 	@Test
 	void GetySettest() {
 		zine.setIzZinema(IzZinema);;
 		zine.setCodzinema(Codzinema);
-		zine.setZbkAretoak(ZbkAretoak);
 		zine.setAreto(areto);
 		assertEquals(zine.getIzZinema(),IzZinema);
 		assertEquals(zine.getCodzinema(),Codzinema);
-		assertEquals(zine.getZbkAretoak(),ZbkAretoak);
-		assertEquals(zine.getAreto(),areto);
+			assertEquals(zine.getAreto(),areto);
 	}
 	@Test
 	void Equalstest() {
@@ -33,7 +31,7 @@ class CineTest {
 	}
 	@Test
 	void toStringtest() {
-		String expected="Zinema [IzZinema=null, Codzinema=0, ZbkAretoak=0, areto=null]";
+		String expected="Zinema [IzZinema=null, Codzinema=0, areto=null]";
 		assertEquals(expected,zine.toString());
 	}
 }

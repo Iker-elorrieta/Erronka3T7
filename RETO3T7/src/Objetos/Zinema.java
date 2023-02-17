@@ -6,14 +6,12 @@ import java.util.Objects;
 public class Zinema {
 	private String IzZinema;
 	private int Codzinema;
-	private int ZbkAretoak;
 	private Aretoa[] areto;
 	
 	
-	public Zinema(int codzinema, int zbkAretoak, Aretoa[] areto) {
+	public Zinema(String izZinema,int codzinema, Aretoa[] areto) {
 		IzZinema = getIzZinema();
 		Codzinema = getCodzinema();
-		ZbkAretoak = getZbkAretoak();
 		areto = getAreto();
 	}
 	public int getCodzinema() {
@@ -21,12 +19,6 @@ public class Zinema {
 	}
 	public void setCodzinema(int codzinema) {
 		Codzinema = codzinema;
-	}
-	public int getZbkAretoak() {
-		return ZbkAretoak;
-	}
-	public void setZbkAretoak(int zbkAretoak) {
-		ZbkAretoak = zbkAretoak;
 	}
 	public Aretoa[] getAreto() {
 		return areto;
@@ -42,7 +34,7 @@ public class Zinema {
 	}
 	@Override
 	public String toString() {
-		return "Zinema [IzZinema=" + IzZinema + ", Codzinema=" + Codzinema + ", ZbkAretoak=" + ZbkAretoak + ", areto="
+		return "Zinema [IzZinema=" + IzZinema + ", Codzinema=" + Codzinema +  ", areto="
 				+ Arrays.toString(areto) + "]";
 	}
 	@Override

@@ -6,11 +6,11 @@ import java.util.Objects;
 public class Sarrera {
 	private int CodSarrera;
 	private Bezeroa beze;
-	private int prezioa;
+	private double prezioa;
 	private Ordutegia[] ordutegi;
 	
 	
-	public Sarrera(int codSarrera, Bezeroa beze, int prezioa, Ordutegia[] ordutegi) {
+	public Sarrera(int codSarrera, Bezeroa beze, double prezioa, Ordutegia[] ordutegi) {
 		CodSarrera = codSarrera;
 		this.beze = beze;
 		this.prezioa = prezioa;
@@ -22,11 +22,11 @@ public class Sarrera {
 	public void setCodSarrera(int codSarrera) {
 		CodSarrera = codSarrera;
 	}
-	public int getPrezioa() {
+	public double getPrezioa() {
 		return prezioa;
 	}
-	public void setPrezioa(int prezioa) {
-		this.prezioa = prezioa;
+	public void setPrezioa(double d) {
+		this.prezioa = d;
 	}	
 	public Bezeroa getBeze() {
 		return beze;

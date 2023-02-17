@@ -36,7 +36,7 @@ class SarreraTest {
 		}
 		@Test
 		void toStringtest() {
-			String expected="Sarrera [CodSarrera=123, beze=null, prezioa=123, ordutegi=null]";
+			String expected="Sarrera [CodSarrera=123, beze=null, prezioa=123.0, ordutegi=null]";
 			assertEquals(expected,sarrera.toString());
 		}
 	
