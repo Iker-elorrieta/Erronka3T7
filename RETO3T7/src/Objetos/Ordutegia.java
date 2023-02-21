@@ -1,18 +1,20 @@
 package Objetos;
 
-import java.util.Date;
+import java.util.Calendar;
 import java.util.Objects;
 
 
 public class Ordutegia {
 	private int CodOrdutegiak;
-	Date Fecha=null;
 	private Filma filma;
+	private Calendar fecha;
 	
-	public Ordutegia(int codOrdutegiak, Date fecha, Filma filma) {
+	public Ordutegia(int codOrdutegiak, Calendar fecha, Filma filma) {
 		CodOrdutegiak = codOrdutegiak;
-		Fecha = fecha;
+		this.fecha = fecha;
 		this.filma = filma;
+	}
+	public Ordutegia() {
 	}
 	public Filma getFilma() {
 		return filma;
@@ -26,17 +28,17 @@ public class Ordutegia {
 	public void setCodOrdutegiak(int codOrdutegiak) {
 		CodOrdutegiak = codOrdutegiak;
 	}
-	public Date getFecha() {
-		return Fecha;
+	public Calendar getFecha() {
+		return fecha;
 	}
-	public void setFecha(Date fecha) {
-		Fecha = fecha;
+	public void setFecha(Calendar fecha) {
+		this.fecha = fecha;
 	}
 	
 	
 	@Override
 	public String toString() {
-		return "Ordutegia [CodOrdutegiak=" + CodOrdutegiak + ", Fecha=" + Fecha + ", filma=" + filma + "]";
+		return "Ordutegia [CodOrdutegiak=" + CodOrdutegiak + ", filma=" + filma + ", fecha=" + fecha + "]";
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -54,3 +56,4 @@ public class Ordutegia {
 	
 	
 }
+

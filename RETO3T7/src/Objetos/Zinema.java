@@ -7,12 +7,21 @@ public class Zinema {
 	private String IzZinema;
 	private int Codzinema;
 	private Aretoa[] areto;
+	private int ZbkAretoak;
 	
-	
-	public Zinema(String izZinema,int codzinema, Aretoa[] areto) {
+	public Zinema(String izZinema,int codzinema, Aretoa[] areto,int zbkAretoak) {
 		IzZinema = getIzZinema();
 		Codzinema = getCodzinema();
 		areto = getAreto();
+		ZbkAretoak = getZbkAretoak();
+	}
+	public Zinema() {
+	}
+	public int getZbkAretoak() {
+		return ZbkAretoak;
+	}
+	public void setZbkAretoak(int zbkAretoak) {
+		ZbkAretoak = zbkAretoak;
 	}
 	public int getCodzinema() {
 		return Codzinema;
@@ -34,8 +43,8 @@ public class Zinema {
 	}
 	@Override
 	public String toString() {
-		return "Zinema [IzZinema=" + IzZinema + ", Codzinema=" + Codzinema +  ", areto="
-				+ Arrays.toString(areto) + "]";
+		return "Zinema [IzZinema=" + IzZinema + ", Codzinema=" + Codzinema + ", areto=" + Arrays.toString(areto)
+				+ ", ZbkAretoak=" + ZbkAretoak + "]";
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -48,6 +57,7 @@ public class Zinema {
 		Zinema other = (Zinema) obj;
 		return Objects.equals(Codzinema, other.Codzinema);
 	}
+	
 	
 	
 	

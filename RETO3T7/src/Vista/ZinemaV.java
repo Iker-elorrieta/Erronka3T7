@@ -115,7 +115,7 @@ public class ZinemaV extends JFrame {
 		contentPane.add(textfilmkop);
 		textfilmkop.setColumns(10);
 		
-		Zinema[] arraycines = Metodoak.arrayZinema();
+		Zinema[] arraycines = Metodoak.ZinemaHasieratu();
 		
 		String  listacines = arraycines.toString();
 		
