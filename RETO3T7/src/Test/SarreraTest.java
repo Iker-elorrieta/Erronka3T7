@@ -12,11 +12,11 @@ import Objetos.Sarrera;
 
 class SarreraTest {
 	int CodSarrera=123;
-	int prezioa=4;
 	Bezeroa beze;
+	int prezioa=4;
 	Ordutegia[] ordutegi;
-	Sarrera sarrera = new Sarrera(CodSarrera, beze, CodSarrera, null);
-	Sarrera sarrera2 = new Sarrera(CodSarrera, beze, CodSarrera, null);
+	Sarrera sarrera = new Sarrera(CodSarrera, beze, prezioa, ordutegi);
+	Sarrera sarrera2 = new Sarrera(CodSarrera, beze, prezioa, ordutegi);
 	@Test
 	void GetySettest() {
 		sarrera.setCodSarrera(CodSarrera);
@@ -36,7 +36,7 @@ class SarreraTest {
 		}
 		@Test
 		void toStringtest() {
-			String expected="Sarrera [CodSarrera=123, beze=null, prezioa=123.0, ordutegi=null]";
+			String expected="Sarrera [CodSarrera=123, beze=null, prezioa=4.0, ordutegi=null]";
 			assertEquals(expected,sarrera.toString());
 		}
 	
