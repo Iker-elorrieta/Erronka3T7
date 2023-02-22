@@ -7,11 +7,6 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import Metodoak.Metodoak;
-import Objetos.Aretoa;
-import Objetos.Bezeroa;
-import Objetos.Filma;
-import Objetos.Ordutegia;
-import Objetos.Zinema;
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -30,8 +25,7 @@ public class FilmaV extends JFrame {
 	FilmaV ventfilmak;
 	OrdutegiaV ventordutegia;
 	ZinemaV ventzinema;
-	private int Codzinema;
-
+	int Codzinema;
 	Calendar Fecha=null;
 
 	Metodoak Metodoak = new Metodoak();
@@ -85,7 +79,7 @@ public class FilmaV extends JFrame {
 			contentPane.add(textFieldzinemaizena);
 			textFieldzinemaizena.setColumns(10);
 		//--------------------------------------
-		/*String[][] arrayfilma = Metodoak.FilmakErakutsi(arrayzinema, Codzinema);
+		String[][] arrayfilma = Metodoak.FilmakErakutsi(ventzinema.arraycines, Codzinema);
 		
 		String  listafilma = arrayfilma.toString();
 		
@@ -105,7 +99,7 @@ public class FilmaV extends JFrame {
 
 			filmak2.addItem(cantfilma2[i]);
 
-		};*/
+		};
 			
 		//EVENTO DE CAMBIO SE SELECCION---------------------	
 		filmak2.addItemListener(new ItemListener() {

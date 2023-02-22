@@ -94,25 +94,19 @@ public class Metodoak {
 								ordutegi.setCodOrdutegiak(Integer.parseInt(request2.getString(2)));
 								
 								//Ordua 
-								String ordua = request2.getString(3);
-								String[] ordua_array = ordua.split(":");
+								String fecha = request2.getString(3);
+								String[] fechaArraya = fecha.split("-");
 								Calendar cal = Calendar.getInstance();
-								cal.set(Calendar.HOUR,Integer.parseInt(ordua_array[0]));
-								cal.set(Calendar.MINUTE,Integer.parseInt(ordua_array[1]));
-								
-								//Data
-								String data = request2.getString(4);
-								String[] data_array = data.split("-");
-								cal.set(Calendar.YEAR,Integer.parseInt(data_array[0]));
-								cal.set(Calendar.MONTH,Integer.parseInt(data_array[1]));
-								cal.set(Calendar.DAY_OF_MONTH,Integer.parseInt(data_array[2]));
-								ordutegi.setFecha(cal);
-								
+								cal.set(Calendar.YEAR,Integer.parseInt(fechaArraya[0]));
+								cal.set(Calendar.MONTH,Integer.parseInt(fechaArraya[1]));
+								cal.set(Calendar.DAY_OF_MONTH,Integer.parseInt(fechaArraya[2]));
+								ordutegi.setFecha(cal);			
+													
 								//Filma
-								Filma filma = new Filma(Integer.parseInt(request2.getString(5)),request2.getString(6),request2.getString(7),Integer.parseInt(request2.getString(8)), data);
+								Filma filma = new Filma(Integer.parseInt(request2.getString(4)),request2.getString(5),request2.getString(6),Integer.parseInt(request2.getString(7)), fecha);
 								ordutegi.setFilma(filma);
 								
-								//Aretoen array-a berridazten du
+								//berridatzi ordutegien arraya
 								Ordutegia[] ordutegi1 = new Ordutegia[HasieratuO.length+1];
 								for(int i =0;i<HasieratuO.length;i++){
 									ordutegi1[i]=HasieratuO[i];
@@ -130,7 +124,7 @@ public class Metodoak {
 						
 						areto.setOrdutegi(ordutegi);
 						
-						//Aretoen array-a berridazten du
+						//berridatzi aretoen arraya
 						Aretoa[] areto1 = new Aretoa[HasieratuA.length+1];
 						for(int i =0;i<HasieratuA.length;i++){
 							areto1[i]=HasieratuA[i];
@@ -147,7 +141,7 @@ public class Metodoak {
 				}			
 				zinema.setAreto(areto);
 				
-				//Zinemen array-a berridazten du
+				//berridatzi zinemen arraya
 				Zinema[] zinema1 = new Zinema[HasieratuZ.length+1];				
 				for(int i=0;i<HasieratuZ.length;i++) {
 					zinema1[i]=HasieratuZ[i];					
@@ -165,4 +159,37 @@ public class Metodoak {
 		return HasieratuZ;
 	}
 	
+	public String[][] FilmakErakutsi(Zinema[] zine, int aukera){
+		String[][] arrayfilmak = new String[0][4];
+		boolean filmaA=false;
+		
+		for(int i=0;i<zine[aukera-1].getAreto().length;i++) {
+			for(int j=0;j<zine[aukera-1].getAreto()[i].getOrdutegi().length;j++) {
+				String Izenburua= zine[aukera-1].getAreto()[i].getOrdutegi()[j].getFilma().getNomFilma();
+				for(int k=0;k<arrayfilmak.length && !filmaA;k++) {
+					if(arrayfilmak[k][0].equals(Izenburua)) {
+						filmaA=true;
+					}
+				}
+				if(!filmaA) {					
+					//Ordutegien arraya berridatzi
+					String[][] filmak1 = new String[arrayfilmak.length+1][4];
+					for(int h =0;h<arrayfilmak.length;h++){
+						for(int l=0;l<arrayfilmak[h].length;l++){
+							filmak1[h][l]=arrayfilmak[h][l];
+						}
+					}
+					filmak1[arrayfilmak.length][0]= Izenburua;
+					filmak1[arrayfilmak.length][1]= zine[aukera-1].getAreto()[i].getOrdutegi()[j].getFilma().getGeneroa();
+					filmak1[arrayfilmak.length][2]= String.valueOf(zine[aukera-1].getAreto()[i].getOrdutegi()[j].getFilma().getIraupena());
+					filmak1[arrayfilmak.length][3]= String.valueOf(zine[aukera-1].getAreto()[i].getOrdutegi()[j].getFilma().getKostua());
+					arrayfilmak = filmak1;					
+					
+				}
+				
+			}
+		}
+		
+		return arrayfilmak;
+	}
 }

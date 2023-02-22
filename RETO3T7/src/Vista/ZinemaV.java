@@ -33,6 +33,7 @@ public class ZinemaV extends JFrame {
 	private JTextField txtinfokantfilma;
 	public JTextField textfilmkop; //esta public para poder pasarle los datos de ordutegia
 	JComboBox<String> cines = new JComboBox<String>();
+	public Zinema[] arraycines;
 	
 	/**
 	 * Launch the application.
