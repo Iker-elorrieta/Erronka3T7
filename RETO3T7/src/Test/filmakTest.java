@@ -20,12 +20,12 @@ class filmakTest {
 		filma.setCodFilma(CodFilma);
 		filma.setIraupena(iraupena);
 		filma.setGeneroa(generoa);
-		filma.setKostua(prezioa);
+		filma.setPrezioa(prezioa);
 		filma.setNomFilma(NomFilma);
 		assertEquals(filma.getCodFilma(),CodFilma);
 		assertEquals(filma.getIraupena(),iraupena);
 		assertEquals(filma.getGeneroa(),generoa);
-		assertEquals(filma.getKostua(),prezioa);
+		assertEquals(filma.getPrezioa(),prezioa);
 		assertEquals(filma.getNomFilma(),NomFilma);
 	}
 	@Test
@@ -36,7 +36,7 @@ class filmakTest {
 	}
 	@Test
 	void toStringtest() {
-		String expected="Filma [CodFilma=4, NomFilma=Psicosis, iraupena=2h, prezioa=5, generoa=terror]";
+		String expected="Filma [CodFilma=4, iraupena=Psicosis, generoa=2h, prezioa=5.0, NomFilma=terror]";
 		assertEquals(expected,filma.toString());
 	}
 	

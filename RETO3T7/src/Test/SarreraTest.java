@@ -12,11 +12,12 @@ import Objetos.Sarrera;
 
 class SarreraTest {
 	int CodSarrera=123;
-	Bezeroa beze;
 	int prezioa=4;
+	Bezeroa beze;
 	Ordutegia[] ordutegi;
 	Sarrera sarrera = new Sarrera(CodSarrera, beze, prezioa, ordutegi);
 	Sarrera sarrera2 = new Sarrera(CodSarrera, beze, prezioa, ordutegi);
+	Sarrera sarrera3 = new Sarrera();
 	@Test
 	void GetySettest() {
 		sarrera.setCodSarrera(CodSarrera);

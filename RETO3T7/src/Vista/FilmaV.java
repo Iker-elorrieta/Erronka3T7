@@ -25,11 +25,11 @@ public class FilmaV extends JFrame {
 	FilmaV ventfilmak;
 	OrdutegiaV ventordutegia;
 	ZinemaV ventzinema;
-	int Codzinema;
+
 	Calendar Fecha=null;
 
 	Metodoak Metodoak = new Metodoak();
-	
+	JComboBox<String> filmak2 = new JComboBox<String>();
 	
 	//private Filma[] filmak = new Filma[0];
 	public JTextField textFieldzinemaizena; //public porqeu si no no le pasamos los datos de zinema
@@ -68,7 +68,7 @@ public class FilmaV extends JFrame {
 		
 	//----COMBOBOX-------
 
-		JComboBox<String> filmak2 = new JComboBox<String>();
+		
 
 		filmak2.setBounds(80, 50, 249, 22);
 		contentPane.add(filmak2);
@@ -79,27 +79,6 @@ public class FilmaV extends JFrame {
 			contentPane.add(textFieldzinemaizena);
 			textFieldzinemaizena.setColumns(10);
 		//--------------------------------------
-		String[][] arrayfilma = Metodoak.FilmakErakutsi(ventzinema.arraycines, Codzinema);
-		
-		String  listafilma = arrayfilma.toString();
-		
-
-		String defaultselected = "Aukeratu film bat...,"; 
-		String cantfilma = defaultselected+listafilma; //pillamos pelis de la base de datos
-
-
-		String[] cantfilma2 = cantfilma.split(","); //separamos por "," para saber cuantos hay y valor en posicion
-
-
-		int cantfilmacant = cantfilma2.length; //cantidad de cines segun split 1 , 2 , 3..
-		//String[] itemscant = new String[cantcinescant]; //array de length segun cantidad de cines
-
-
-		for(int i = 0; i< cantfilmacant ; i++) {
-
-			filmak2.addItem(cantfilma2[i]);
-
-		};
 			
 		//EVENTO DE CAMBIO SE SELECCION---------------------	
 		filmak2.addItemListener(new ItemListener() {

@@ -16,6 +16,8 @@ public class Sarrera {
 		this.prezioa = prezioa;
 		this.setOrdutegi(ordutegi);
 	}
+	public Sarrera() {
+	}
 	public int getCodSarrera() {
 		return CodSarrera;
 	}

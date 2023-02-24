@@ -6,8 +6,13 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.awt.event.ActionEvent;
 
 public class ErosketafinalaV extends JFrame {
@@ -39,6 +44,7 @@ public class ErosketafinalaV extends JFrame {
 	 * Create the frame.
 	 */
 	public ErosketafinalaV() {
+		setTitle("TIKET");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -54,10 +60,56 @@ public class ErosketafinalaV extends JFrame {
 		JButton btnbai = new JButton("Bai");
 		btnbai.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//popup joptionpanelshowmessagedialog
+				
+				int kantpelis = 5; //cantidad de lineas que guardara
+				
+				String[] filmak= new String [kantpelis];
+			//datos inventados	
+				filmak[0]= "hulk,19:30,getxo";
+					filmak[1]= "handia,9:40,elorrieta-errekamari";
+						filmak[2]= "alien,11:00,max-center";
+							filmak[3]= "perro,10:30,getxo";
+								filmak[4]= "juan,21:00,elorrieta-errekamari";
+			//---------------------------
+	
+				
+				File file = new File("tiket.txt"); //nombre del fichero
+				
+				BufferedWriter fichero;
+				
+					try {
+						
+						fichero = new BufferedWriter(new FileWriter(file));
+							
+						for(int i =0;i<kantpelis;i++)
+						{
+							fichero.write(filmak[i]+"&"+"\n"); //sintaxia: dato + "diferencial" + intro
+						}
+						fichero.close(); //cerrar el fichero para que no de problemas
+					
+					} catch (IOException e1) {
+						e1.printStackTrace(); //syso de error
+					}
+				
+					
+					
+				
+			//info del archivo	
+				System.out.println(file.exists()); //si el fichero existe(importante para saber en la zona de "File file = new File("tiket.txt");" )
+				System.out.println("Ruta: "+file.getAbsolutePath()); //rita del fichero(en caso de existencia)
+				//diferencia de fichero y carpeta
+				System.out.println("archibo bat da? "+file.isFile());
+				System.out.println("karpeta bat da? "+file.isDirectory());
+				
+				System.out.println(file.length()); //cant de lineas
+				
+				
+				JOptionPane.showMessageDialog(null, "Tiket sarrerak era egokian erosi dira!"); //POP UP
+				
 			}
+				
 		});
-		btnbai.setBounds(173, 138, 89, 23);
+		btnbai.setBounds(155, 123, 89, 23);
 		contentPane.add(btnbai);
 		
 		JButton btnbultatuasierara = new JButton("Bueltatu asierara");

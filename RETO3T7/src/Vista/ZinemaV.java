@@ -28,12 +28,13 @@ public class ZinemaV extends JFrame {
 	LaburpenaV ventLabur;
 	FilmaV ventfilmak;
 	Metodoak Metodoak = new Metodoak();
-	
+	String zinemaH;
 	private Filma[] filmak = new Filma[0];
+	private Zinema[] zinema = new Zinema[1];
 	private JTextField txtinfokantfilma;
 	public JTextField textfilmkop; //esta public para poder pasarle los datos de ordutegia
 	JComboBox<String> cines = new JComboBox<String>();
-	public Zinema[] arraycines;
+	Filma[] aukeratua;
 	
 	/**
 	 * Launch the application.
@@ -116,31 +117,31 @@ public class ZinemaV extends JFrame {
 		contentPane.add(textfilmkop);
 		textfilmkop.setColumns(10);
 		
-		Zinema[] arraycines = Metodoak.ZinemaHasieratu();
+		zinema = Metodoak.ZinemaHasieratu();
+		for (int i = 0; i < zinema.length; i++) {
+			cines.addItem(zinema[i].getIzZinema());
+		}
+		JButton btnAukeratu = new JButton("Aukeratu");
+		btnAukeratu.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ventfilmak = new FilmaV();
+				ventfilmak.setVisible(true);
+				dispose();
+				zinemaH = String.valueOf(cines.getSelectedItem());
+				ventfilmak.filmak2.setToolTipText(zinemaH);
+				aukeratua = new Filma[1];
+				aukeratua = Metodoak.FilmakErakutsi(zinemaH, zinema);
+					for(int i=0;i<aukeratua.length;i++) {
+						cines.addItem(aukeratua[i].getNomFilma());
+					}
+				
+			}
+		});
+		btnAukeratu.setBounds(279, 198, 89, 23);
+		contentPane.add(btnAukeratu);
 		
-		String  listacines = arraycines.toString();
-		
-		
-		String defaultselected = "aukeratu...    ,"; 
-		String cantcines = defaultselected+listacines; //pillamos pelis de la base de datos
-
-
-		String[] cantcines2 = cantcines.split(","); //separamos por "," para saber cuantos hay y valor en posicion
-
-
-		int cantcinescant = cantcines2.length; //cantidad de cines segun split 1 , 2 , 3..
-		//String[] itemscant = new String[cantcinescant]; //array de length segun cantidad de cines
-
-		for(int i = 0; i< cantcinescant ; i++) {
-			
-
-		cines.addItem(cantcines2[i]);
-
-
-		};
-		
-
-	//EVENTO DE CAMBIO DE SELECCION---------------------	
+		 
+		//EVENTO DE CAMBIO DE SELECCION---------------------	
 		cines.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
 				  if (e.getStateChange() == ItemEvent.SELECTED) {	//solo activarse al hacer clic en opcion y no en el cuadrado y luego en la opcion (si no en getselecteditem se repite 2 veces(1por abrir cuadrado, 1 por seleccionar))	

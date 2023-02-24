@@ -1,0 +1,5 @@
+hulk,19:30,getxo&
+handia,9:40,elorrieta-errekamari&
+alien,11:00,max-center&
+perro,10:30,getxo&
+juan,21:00,elorrieta-errekamari&

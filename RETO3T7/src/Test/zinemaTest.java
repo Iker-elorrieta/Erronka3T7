@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import Objetos.Aretoa;
 import Objetos.Zinema;
 
-class CineTest {
+class zinemaTest {
 	String IzZinema = "Elorrieta-errekamari zinema"; 
 	int Codzinema = 2;
 	int ZbkAretoak = 3;

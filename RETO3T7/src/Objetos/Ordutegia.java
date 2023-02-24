@@ -1,5 +1,8 @@
 package Objetos;
 
+import java.sql.Date;
+import java.sql.Time;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Objects;
 
@@ -7,12 +10,22 @@ import java.util.Objects;
 public class Ordutegia {
 	private int CodOrdutegiak;
 	private Filma filma;
-	private Calendar fecha;
+	private Date fecha;
+	private Time ordua;
 	
-	public Ordutegia(int codOrdutegiak, Calendar fecha, Filma filma) {
+	public Ordutegia(int codOrdutegiak, Date fecha, Filma filma, Time ordua) {
+		Calendar cal = Calendar.getInstance();
+		SimpleDateFormat Fecha = new SimpleDateFormat("yyyy-MM-dd");
+		Fecha.format(cal.getTime());
+		Calendar cal1 = Calendar.getInstance();
+		SimpleDateFormat data1 = new SimpleDateFormat("hh:mm:ss");
+		data1.format(cal1.getTime());
+		java.util.Date date = cal1.getTime();
+		setOrdua(new java.sql.Time(date.getTime()));
 		CodOrdutegiak = codOrdutegiak;
 		this.fecha = fecha;
 		this.filma = filma;
+		this.ordua = ordua;
 	}
 	public Ordutegia() {
 	}
@@ -28,17 +41,23 @@ public class Ordutegia {
 	public void setCodOrdutegiak(int codOrdutegiak) {
 		CodOrdutegiak = codOrdutegiak;
 	}
-	public Calendar getFecha() {
+	public Date getFecha() {
 		return fecha;
 	}
-	public void setFecha(Calendar fecha) {
-		this.fecha = fecha;
+	public void setFecha(Date date) {
+		this.fecha = date;
 	}
-	
+	public Time getOrdua() {
+		return ordua;
+	}
+	public void setOrdua(Time ordua) {
+		this.ordua = ordua;
+	}
 	
 	@Override
 	public String toString() {
-		return "Ordutegia [CodOrdutegiak=" + CodOrdutegiak + ", filma=" + filma + ", fecha=" + fecha + "]";
+		return "Ordutegia [CodOrdutegiak=" + CodOrdutegiak + ", filma=" + filma + ", fecha=" + fecha + ", ordua="
+				+ ordua + "]";
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -51,6 +70,7 @@ public class Ordutegia {
 		Ordutegia other = (Ordutegia) obj;
 		return Objects.equals(CodOrdutegiak , other.CodOrdutegiak) ;
 	}
+	
 
 	
 	

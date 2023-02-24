@@ -15,6 +15,7 @@ class BezeroTest {
 	String pasahitza = "1234";
 	Bezeroa bezero = new Bezeroa(DNI, Izena, Abizenak1, Abizenak2, sexua, pasahitza);
 	Bezeroa bezero2 = new Bezeroa(DNI, Izena, Abizenak1, Abizenak2, sexua, pasahitza);
+	Bezeroa bezero3 = new Bezeroa();
 	@Test
 	void GetyTesttest() {
 			bezero.setDNI(DNI);
