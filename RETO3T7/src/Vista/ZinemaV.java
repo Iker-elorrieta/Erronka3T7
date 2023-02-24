@@ -15,8 +15,6 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
-import java.awt.event.ItemListener;
-import java.awt.event.ItemEvent;
 import javax.swing.JTextField;
 
 public class ZinemaV extends JFrame {
@@ -120,6 +118,7 @@ public class ZinemaV extends JFrame {
 		zinema = Metodoak.ZinemaHasieratu();
 		for (int i = 0; i < zinema.length; i++) {
 			cines.addItem(zinema[i].getIzZinema());
+			
 		}
 		JButton btnAukeratu = new JButton("Aukeratu");
 		btnAukeratu.addActionListener(new ActionListener() {
@@ -127,42 +126,23 @@ public class ZinemaV extends JFrame {
 				ventfilmak = new FilmaV();
 				ventfilmak.setVisible(true);
 				dispose();
+				String cinelegido = (String) cines.getSelectedItem();
+				System.out.println("Zinema: "+cinelegido);
+				ventfilmak.setTitle(cinelegido+" Zinema");
+				ventfilmak.textFieldzinemaizena.setText(cinelegido+" dauden filmak:");
 				zinemaH = String.valueOf(cines.getSelectedItem());
 				ventfilmak.filmak2.setToolTipText(zinemaH);
 				aukeratua = new Filma[1];
 				aukeratua = Metodoak.FilmakErakutsi(zinemaH, zinema);
 					for(int i=0;i<aukeratua.length;i++) {
 						cines.addItem(aukeratua[i].getNomFilma());
+						
 					}
 				
 			}
 		});
 		btnAukeratu.setBounds(279, 198, 89, 23);
 		contentPane.add(btnAukeratu);
-		
-		 
-		//EVENTO DE CAMBIO DE SELECCION---------------------	
-		cines.addItemListener(new ItemListener() {
-			public void itemStateChanged(ItemEvent e) {
-				  if (e.getStateChange() == ItemEvent.SELECTED) {	//solo activarse al hacer clic en opcion y no en el cuadrado y luego en la opcion (si no en getselecteditem se repite 2 veces(1por abrir cuadrado, 1 por seleccionar))	
-
-						String cinelegido = (String) cines.getSelectedItem(); //guardamos lo que se selecciona(no se porqeu guarda 2)
-					
-						System.out.println("Zinema: "+cinelegido);
-						if(cinelegido !="") { //evento al cambio de seleccion
-							
-							ventfilmak = new FilmaV();
-							ventfilmak.setVisible(true);
-							dispose();
-							
-						//le pasamos los datos a a ventana creada(al textfield y title)	
-							ventfilmak.setTitle(cinelegido+" Zinema");
-							ventfilmak.textFieldzinemaizena.setText(cinelegido+" dauden filmak:");
-						}
-				  }
-			}
-			
-		});
 
 	//-------------------------------------------------
 		
